@@ -1,0 +1,209 @@
+% ================================================
+% About: Main.tex
+% Description: Main .tex file where format,
+% chapter, annexes '\& bibliography are included
+% ================================================
+
+% ===========  DOCUMENT CLASS  ===================
+% \documentclass[12pt]{report}
+% \documentclass[12pt,openany]{report}
+\documentclass[11pt,twoside,openright]{report}
+% \documentclass{style/thesis}
+% ================================================
+% ===========  STYLE AND FORMAT ==================
+\input{style/coverletter}
+\input{style/format}
+\makeindex
+% ================================================
+\usepackage[utf8]{inputenc}
+
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+% Busqueda de imagenes en diferentes carpetas
+\graphicspath{
+    {images/MSc/}
+    {images/ContextoGan/}
+}
+
+
+
+\title{Modelamiento dinámico de la producción ganadera  en el Servicio Nacional de Aprendizaje SENA - Seccional Popayán, Cauca}
+\author{Luis Felipe Guevara Gomez}
+\date{April 2026}
+
+
+%\autorA{COD}{Primer Autor}
+\autorA{2117293}{Ing. Luis Felipe Guevara Gómez}
+%\autorB{COD}{Segundo Autor} %Opcional
+
+% ==============================
+% FECHA DE ENTREGA
+\fecha{\today}
+% ==============================
+
+
+% Tek
+% ==============================
+% DIRECTOR DEL PROYECTO
+% \directorproyecto{Dr.}{Nombre del Director}
+\directorproyecto{Dr.}{Luis Eduardo Tobón Llano}
+% \codirectorproyecto{Dr.}{Luis Fernando Macea Mercado}
+% DIRECTOR DE CARRERA
+\directorcarrera{Dr.}{Juan Carlos Martinez Arias}
+% DECANO FIC
+\decanoFIC{Dr.}{Hern\'an Camilo Rocha Ni\~no}
+
+
+% ==============================
+% JURADOS
+% Jurado 1
+\juradoA{Dr.}{Andrés Felipe Amador Rodriguez}
+% Jurado 2
+\juradoB{Dr.}{Juan Camilo Paz Roa}
+% ==============================
+
+
+
+
+
+\begin{document}
+    % \frontmatter
+    % \makecoverletter
+    % \makeficha
+
+    % \chapter*{Resumen} \input{otros/resumen}
+    % \chapter*{Abstract} \input{otros/abstract}
+
+    \maketitle
+
+    % \chapter*{Agradecimientos} \input{otros/agradecimientos}
+
+    % \chapter*{Nomenclatura}
+    % \makenomenclature \input{otros/nomenclatura}
+
+    % \chapter*{Glosario} \input{docs/glosario}
+
+    % =====================
+    % % Table of contents
+    % % \& Preamble
+    % =====================
+
+    % \maketitle
+
+    % Indice general
+    \tableofcontents %\label{Indextable}
+
+    % % Indice de figuras
+    % \listoffigures
+
+    % % Indice de tablas
+    % \renewcommand\listtablename{Índice de tablas}
+    % \listoftables   zz
+
+    \clearpage
+
+    % % =========================================
+    \cleardoublepage
+    % % =========================================
+    % \mainmatter
+    % ==========================================
+    % % CAPITULOS INTRO - CONCLUSIONES
+    % ==========================================
+    \chapter{Introducción}
+    % \chapter{Introduction}
+    \input{chapters/introduction}
+
+    \chapter{Objetivos y restricciones}
+    % \chapter{Objectives and restrictions}
+    \label{Objs}
+    \input{chapters/objectives}
+
+    \chapter{Metodología}
+    % \chapter{Methodology}
+    % % % \label{visglob}
+    \input{chapters/methodology}
+
+    \chapter{Marco teórico}
+    % \chapter{Theoretical framework}
+    \label{visglob}
+    \input{chapters/theoretical_framework}
+
+    \chapter{Entendimiento del negocio}
+    % \chapter{Business Understanding}
+    \label{crisp1}
+    \input{chapters/business_understanding}
+
+    \chapter{Entendimiento de los datos}
+    % \chapter{Data Understanding}
+    \label{crisp2}
+    \input{chapters/data_understanding}
+
+    \chapter{Preparación de los datos}
+    % \chapter{Data Preparation}
+    \label{crisp3}
+    \input{chapters/data_preparation}
+
+    \chapter{Modelado}
+    % \chapter{Modeling}
+    \label{crisp4}
+    \input{chapters/modeling}
+
+    \chapter{Evaluación}
+    % \chapter{Assessment}
+    \label{crisp5}
+    \input{chapters/assessment}
+
+    \chapter{Conclusiones y trabajos futuros}
+    % \chapter{Conclusions and future projects}
+    \input{chapters/conclusion}
+    % ==========================================
+
+    % ==========================================
+    % % BIBLIOGRAFIA
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{Bibliografía}
+    % \bibliographystyle{IEEEtran}
+    \bibliographystyle{plain}
+    \bibliography{bibliography}
+    % ==========================================
+
+
+    % ==========================================
+    % % Appendix,
+    % Once created, chapters become annexes.
+    \appendix
+    % \appendixsetup
+    % ==========================================
+
+    % % \chapter{Mixed-Integer Linear Programming Optimization}
+    \chapter{Optimización por Programación Lineal Entera Mixta}\label{milpanexus}
+    % \pagebreak
+    \input{annexes/milpAnnexe}
+
+    % \chapter{Fitting parameters $\alpha$, $\beta$ y $\gamma$ for each method.}
+    \chapter{Parámetros $\alpha$, $\beta$ y $\gamma$ para cada método de ajuste}\label{tabAllParamsanexus}
+    \input{annexes/tabAllParamsAnnexe}
+
+    % \chapter{Covriance matrices for the ``nlmefit'' method}
+    \chapter{Matrices de covarianza, método ``nlmefit''}\label{covarMatrixanexus}
+    \pagebreak
+    \input{annexes/covarMatrixAnnexe}
+
+    % \chapter{Mathematical relation between the parameters $k_{1}$, $k_{2}$, $k_{3}$ \& $k_{4}$}
+    \chapter{Relación matemática entre parámetros $k_{1}$, $k_{2}$, $k_{3}$ y $k_{4}$}\label{kiParamsanexus}
+    \input{annexes/kiParamsAnnexe}
+
+    % \chapter{2D - Ordinary Differential Equation model - WP}
+    \chapter{Modelo bidimensional ``WP'', por ecuaciones diferenciales ordinarias}\label{edoModelanexus}
+    \input{annexes/edoModelAnnexe}
+    % ==========================================
+
+
+
+    % =================
+    % % GENERAL INDEX
+    % =================
+
+    % \printindex
+
+\end{document}
