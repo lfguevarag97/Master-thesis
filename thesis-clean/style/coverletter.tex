@@ -1,0 +1,134 @@
+\newcommand{\makecoverletter}{
+% Este "{" va hasta donde dice End by colarte
+% \thispagestyle{empty}
+% \ \newpage
+% \thispagestyle{empty}
+% \begin{adjustwidth}{8cm}{0.5cm}
+% \noindent Nota de Aceptación
+% \vskip 0.5cm
+% \noindent {Aprobado por el Comité de Trabajo de Grado en cumplimiento de los requisitos exigidos por la Pontificia Universidad Javeriana para optar al título de Magister en Ingeniería en Electrónica.}
+% \end{adjustwidth}
+% \vskip 3cm
+% \begin{center}
+% \line(1,0){200}\\
+% \deanFIC \\
+% Decano Facultad de Ingeniería y Ciencias \\
+% \vskip 2cm
+% \line(1,0){200}\\
+% \directorIE \\
+% Director de Posgrados Facultad Ingeniería y Ciencias\\
+% \vskip 2cm
+% \ifthenelse{\equal{\codirector}{}}
+% {
+% \line(1,0){200}\\
+% \director \\
+% Director Trabajo de Grado
+% }
+% {
+% \begin{tabular}{c{8cm}c{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \director & \codirector \\
+% Director Trabajo de Grado & Co-Director Trabajo de Grado \\
+% \end{tabular}
+% }
+% \vskip 2cm
+% \begin{tabular}{c{8cm}c{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \juryA & \juryB \\
+% Jurado 1 & Jurado 2
+% \end{tabular}
+% \end{center}
+
+% \cleardoublepage
+
+% \thispagestyle{empty}
+% \noindent Santiago de Cali, \fecha. \\
+% \vspace{2cm}\\
+% \noindent Se\~nores\\
+% \noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
+% \noindent \decanoFIC \\
+% \noindent Decano \\
+% Facultad de Ingenier\'ia y Ciencias \\
+% Ciudad
+% \vspace{2cm}\\
+% \noindent Cordial Saludo.\\\\\\
+%  Por medio de la presente me permito presentarle el Trabajo de Grado titulado ``\titulovar''.\\
+
+% \noindent Espero que este trabajo re\'una todos los requisitos acad\'emicos, cumpla el prop\'osito para el cual fue creado y sirva de apoyo para futuros proyectos relacionados con la materia.\\ \\ \\
+
+% \noindent Atentamente,\\\\
+% \\\vspace{2cm}\\
+% \ifthenelse{\equal{\codirectorproyecto}{}}
+% {
+% \line(1,0){200}\\
+% \authorA
+% }
+% {
+% \begin{tabular}{p{8cm}p{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \authorA & \authorB
+% \end{tabular}
+% }
+
+\thispagestyle{empty}
+\noindent Santiago de Cali, \fecha. \\
+\vspace{1.5cm}\\
+\noindent \textbf{Ingeniero:}\\
+\textbf{\directorIE}\\
+\noindent \textbf{Director Posgrados de Ingeniería} \\
+\textbf{Facultad de Ingenier\'ia y Ciencias} \\
+\noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
+
+\vspace{1.5cm}\\
+ \noindent Con el fin de cumplir con los requisitos exigidos por la Universidad para llevar a cabo el Trabajo de Grado y posteriormente optar por el título de Magíster en Ingeniería -- Énfasis en Electrónica, nos permitimos presentar a su consideración el proyecto de Trabajo de Grado denominado ``\titulovar'', el cual será realizado por el estudiante \authorA, con código \authorACOD, perteneciente al énfasis en Electrónica, bajo la dirección del profesor \director.\\
+
+ \noident El suscrito director del Trabajo de Grado autoriza para que se proceda a hacer la evaluación de este Proyecto ante el Tribunal que para el efecto se designe, toda vez que ha revisado cuidadosamente el documento y avala que ya se encuentra listo para ser presentado oficialmente.\\
+
+ \vspace{1.5cm}\\
+ \noindent Atentamente,\\
+ \vspace{2cm}\\
+ \begin{tabular}{p{8cm}p{8cm}}
+ \line(1,0){200}&\line(1,0){200} \\
+ \authorA & \director \\
+ C.C: 1.144.095.556 de Cali & C.C: 9.726.670  de Armenia.
+ \end{tabular}
+
+% \cleardoublepage
+
+%%%%%%%%%% 2nd Letter %%%%%%%%%%%%%
+% \thispagestyle{empty}
+% \noindent Santiago de Cali, \fecha. \\
+% \vspace{2cm}\\
+% \noindent Se\~nores\\
+% \noindent {\bf Pontificia Universidad Javeriana -- Cali}\\
+% \noindent \decanoFIC \\
+% \noindent Decano \\
+% Facultad de Ingenier\'ia y Ciencias \\
+% Ciudad
+% \vspace{2cm}\\
+% \noindent Cordial Saludo.\\\\\\
+% \ifthenelse{\equal{\codirectorproyecto}{}}{Certifico}{Certificamos}
+% que el presente Trabajo de Grado titulado ``\titulovar'', realizado por el
+% \ifthenelse{\equal{\authorB}{}}{\authorA, estudiante}{\authorA y \authorB, estudiantes}
+% de la Maestría en Ingenier\'ia en Electr\'onica, se encuentra terminado y puede ser presentado para sustentaci\'on.\\ \\ \\
+
+% \noindent Atentamente,\\\\
+% \\\vspace{2cm}\\
+% \ifthenelse{\equal{\codirectorproyecto}{}}
+% {
+% \line(1,0){200}\\
+% \director \\
+% Director del proyecto
+% }
+% {
+% \begin{tabular}{p{8cm}p{8cm}}
+% \line(1,0){200}&\line(1,0){200} \\
+% \director & \codirector \\
+% Director del proyecto & Co-director del proyecto
+% \end{tabular}
+% }
+
+% \cleardoublepage
+
+}
+%% End: Edited by colarte, Tek
