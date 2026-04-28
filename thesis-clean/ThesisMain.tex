@@ -1,112 +1,110 @@
-% ================================================
-% About: Main.tex
-% Description: Main .tex file where format,
+% ==============================================
+% About: Main.text file
+% Description: ThesisMain.tex file where format,
 % chapter, annexes '\& bibliography are included
-% ================================================
+% ==============================================
 
-% ===========  DOCUMENT CLASS  ===================
-% \documentclass[12pt]{report}
-% \documentclass[12pt,openany]{report}
-\documentclass[11pt,twoside,openright]{report}
+% ======  DOCUMENT CLASS  ===========
+% \documentclass[11pt,twoside]{report}
+\documentclass[11pt,twoside,draft]{report}
 % \documentclass{style/thesis}
-% ================================================
-% ===========  STYLE AND FORMAT ==================
-\input{style/coverletter}
-\input{style/format}
-\makeindex
-% ================================================
+% .CLS  file, I ended up not using it
+% ===================================
+
+% ===================================
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+% ======  STYLE AND FORMAT =========
+% \input{otros/coverletter}
+\input{style/format}
+% ===================================
 
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+% % % =======================================================
+% % === PARA INDICE, NOMENCLATURA Y GLOSARIO ============
+% % === Inicializa el uso del INDICE ===
+% \makeindex
+% Yo NO tengo indice, entonces no lo uso
+% % ====================================
 
-% Busqueda de imagenes en diferentes carpetas
+% % === Inicializa el uso de NOMENCLATURA ===
+\makenomenclature
+% % =========================================
+
+% % === Inicializa el uso del GLOSARIO ===
+% \usepackage{glossaries}
+% \makeglossaries
+% -----------------------
+% En el main pongo algo como
+% \input{glosario.tex}
+% -----------------------
+% y dentro del glosario.tex va algo así:
+% \newglossaryentry{tensor}{
+%   name=tensor,
+%   description={Objeto matemático que...}
+% }
+% -----------------------
+% Dentro del texto vendría algo así:
+% El \gls{wachufli} es fundamental...
+% % =======================================
+% % % =======================================================
+
+% Buscar imagenes varias carpetas
 \graphicspath{
     {images/MSc/}
     {images/ContextoGan/}
 }
 
+\input{otros/thesisInfo}
 
-
-\title{Modelamiento dinámico de la producción ganadera  en el Servicio Nacional de Aprendizaje SENA - Seccional Popayán, Cauca}
-\author{Luis Felipe Guevara Gomez}
-\date{April 2026}
-
-
-%\autorA{COD}{Primer Autor}
-\autorA{2117293}{Ing. Luis Felipe Guevara Gómez}
-%\autorB{COD}{Segundo Autor} %Opcional
-
-% ==============================
-% FECHA DE ENTREGA
-\fecha{\today}
-% ==============================
-
-
-% Tek
-% ==============================
-% DIRECTOR DEL PROYECTO
-% \directorproyecto{Dr.}{Nombre del Director}
-\directorproyecto{Dr.}{Luis Eduardo Tobón Llano}
-% \codirectorproyecto{Dr.}{Luis Fernando Macea Mercado}
-% DIRECTOR DE CARRERA
-\directorcarrera{Dr.}{Juan Carlos Martinez Arias}
-% DECANO FIC
-\decanoFIC{Dr.}{Hern\'an Camilo Rocha Ni\~no}
-
-
-% ==============================
-% JURADOS
-% Jurado 1
-\juradoA{Dr.}{Andrés Felipe Amador Rodriguez}
-% Jurado 2
-\juradoB{Dr.}{Juan Camilo Paz Roa}
-% ==============================
-
-
-
-
-
+% % % =============== BEGIN DOCUMENT ===============
 \begin{document}
     % \frontmatter
-    % \makecoverletter
-    % \makeficha
+    \input{otros/coverletter} % Definicion comando \makecoverletter
+    \input{otros/fichatecnica} % Definición comando \makeficha
+    % % ==============================
+    % % FECHA DE ENTREGA
+    % \fecha{\today}
+    % % ==============================
+    \makecoverletter
+    \makeficha
 
-    % \chapter*{Resumen} \input{otros/resumen}
-    % \chapter*{Abstract} \input{otros/abstract}
+    % Resumen
+    \chapter*{Resumen} \input{otros/resumen}
 
-    \maketitle
+    % Abstract
+    \chapter*{Abstract} \input{otros/abstract}
 
-    % \chapter*{Agradecimientos} \input{otros/agradecimientos}
+    % Titulo y portada
+    \input{otros/maketitlepuj} % Definición comando \maketitle
+    \maketitlepuj
 
-    % \chapter*{Nomenclatura}
-    % \makenomenclature \input{otros/nomenclatura}
+    % Agradecimientos
+    \chapter*{Agradecimientos} \input{otros/agradecimientos}
 
-    % \chapter*{Glosario} \input{docs/glosario}
+    % % Nomenclatura
+    % \chapter*{Nomenclatura} \label{nomenclatura}
+    \input{otros/nomenclatura}
+    \printnomenclature[3cm]
 
-    % =====================
-    % % Table of contents
-    % % \& Preamble
-    % =====================
+    % % Glosario
+    % % \chapter*{Glosario} \input{glosario}
 
-    % \maketitle
+    % % =====================
+    % % % Table of contents
+    % % % \& Preamble
+    % % =====================
 
-    % Indice general
+    % % Indice general
     \tableofcontents %\label{Indextable}
 
-    % % Indice de figuras
-    % \listoffigures
+    % % % Indice de figuras
+    \listoffigures
 
-    % % Indice de tablas
-    % \renewcommand\listtablename{Índice de tablas}
-    % \listoftables   zz
+    % % % Indice de tablas
+    % % \renewcommand\listtablename{Índice de tablas}
+    \listoftables
 
-    \clearpage
-
-    % % =========================================
-    \cleardoublepage
-    % % =========================================
-    % \mainmatter
-    % ==========================================
+    % % ==========================================
     % % CAPITULOS INTRO - CONCLUSIONES
     % ==========================================
     \chapter{Introducción}
@@ -137,6 +135,7 @@
     % \chapter{Data Understanding}
     \label{crisp2}
     \input{chapters/data_understanding}
+    \cleardoublepage
 
     \chapter{Preparación de los datos}
     % \chapter{Data Preparation}
@@ -155,55 +154,75 @@
 
     \chapter{Conclusiones y trabajos futuros}
     % \chapter{Conclusions and future projects}
+    \label{conclusiones}
     \input{chapters/conclusion}
-    % ==========================================
+    % \cleardoublepage
+    % % % ==========================================
+    % \nocite{*}
+    % % ==========================================
+    % % % BIBLIOGRAFIA
 
-    % ==========================================
-    % % BIBLIOGRAFIA
-    \cleardoublepage
     \addcontentsline{toc}{chapter}{Bibliografía}
-    % \bibliographystyle{IEEEtran}
+    % % \bibliographystyle{IEEEtran}
     \bibliographystyle{plain}
     \bibliography{bibliography}
-    % ==========================================
+    % % ==========================================
 
-
-    % ==========================================
-    % % Appendix,
-    % Once created, chapters become annexes.
+    % % ==========================================
+    % % %  APPENDIX
+    % % ==========================================
+    % % Once created, chapters become annexes.
     \appendix
-    % \appendixsetup
-    % ==========================================
+    % % \appendixsetup
+    % % ==========================================
 
+    \chapter{Optimización por Programación Lineal Entera Mixta}
     % % \chapter{Mixed-Integer Linear Programming Optimization}
-    \chapter{Optimización por Programación Lineal Entera Mixta}\label{milpanexus}
-    % \pagebreak
+    \label{milpanexus}
     \input{annexes/milpAnnexe}
 
+    \chapter{Parámetros $\alpha$, $\beta$ y $\gamma$ para cada método de ajuste}
     % \chapter{Fitting parameters $\alpha$, $\beta$ y $\gamma$ for each method.}
-    \chapter{Parámetros $\alpha$, $\beta$ y $\gamma$ para cada método de ajuste}\label{tabAllParamsanexus}
+    \label{tabAllParamsanexus}
     \input{annexes/tabAllParamsAnnexe}
 
-    % \chapter{Covriance matrices for the ``nlmefit'' method}
-    \chapter{Matrices de covarianza, método ``nlmefit''}\label{covarMatrixanexus}
-    \pagebreak
+    \chapter{Matrices de covarianza, método `nlmefit''}
+    % \chapter{Covriance matrices for the ``nlmefit'' method}`
+    \label{covarMatrixanexus}
+    % \pagebreak
     \input{annexes/covarMatrixAnnexe}
 
-    % \chapter{Mathematical relation between the parameters $k_{1}$, $k_{2}$, $k_{3}$ \& $k_{4}$}
-    \chapter{Relación matemática entre parámetros $k_{1}$, $k_{2}$, $k_{3}$ y $k_{4}$}\label{kiParamsanexus}
+    \chapter{Relación matemática entre parámetros $k_{i}$}
+    % \chapter{Mathematical relation between the parameters $k_{i}$}
+    \label{kiParamsanexus}
     \input{annexes/kiParamsAnnexe}
 
+    \chapter{Representación gráfica: Modelo bidimensional ``WP''}
     % \chapter{2D - Ordinary Differential Equation model - WP}
-    \chapter{Modelo bidimensional ``WP'', por ecuaciones diferenciales ordinarias}\label{edoModelanexus}
+    \label{edoModelanexus}
     \input{annexes/edoModelAnnexe}
-    % ==========================================
+    % % % ==========================================
 
-
-
-    % =================
-    % % GENERAL INDEX
-    % =================
-
+    % % =================
+    % % % GENERAL INDEX
+    % % =================
+    % Esto no se usó en mi tesis pero sirve para
+    % hacer un listado de las veces donde se usa
+    % una palabra en el texto, si y solo si, esas
+    % veces que se usó la palabra "wachufli" se
+    % puso el indicativo \index{wachufli}
+    % Ejemplo:  El termino wachufli \index{wachufli}
+    % Ahí hara seguimiento a ese wachufli, en la pag xx.
+    % % =================
     % \printindex
+    % % =================
+
+    % % =================
+    % % % GLOSARIO /
+    % % % MINI DICCIONARIO
+    % % =================
+    % \printglossaries
+    % % =================
 
 \end{document}
+% % % =============== BEGIN DOCUMENT ===============

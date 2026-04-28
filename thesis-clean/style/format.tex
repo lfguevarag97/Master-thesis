@@ -1,9 +1,9 @@
-% ==============================================
+% ======================================
 % About file: Format and style
 % Description: list of packages, colors \& Style
-% ==============================================
+% ======================================
 
-\usepackage{amsmath,amssymb}             % AMS Math
+\usepackage{amsmath,amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{rotating,booktabs}
 \usepackage{xcolor}
@@ -13,19 +13,62 @@
 \usepackage{ulem}
 \usepackage{etoolbox}
 \usepackage{graphicx}
+% \usepackage[draft]{graphicx}
 \usepackage{float}
 \usepackage{multicol}
 \usepackage{microtype}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage{microtype}
+% \usepackage{newtxtext}
+\usepackage{newtxmath}
+% \usepackage{lmodern}
+\renewcommand{\familydefault}{\rmdefault}  % serif
+% \renewcommand{\familydefault}{\sfdefault}  % sans
+% \renewcommand{\familydefault}{\ttdefault}  % typewriter
+% \renewcommand{\familydefault}
+% \renewcommand{\familydefault}{\rmdefault}
+% \renewcommand{\familydefault}{\sfdefault}
+
 
 \usepackage[left=1.0in,right=1.0in,top=1.0in,bottom=1.0in,includefoot,includehead,headheight=13.6pt]{geometry}
 \renewcommand{\baselinestretch}{1.05}
 
+\usepackage{changepage}
+\usepackage{ifthen}
+\NeedsTeXFormat{LaTeX2e}
+
+
 \usepackage{titlesec}
+
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+\titlespacing*{\section}{0pt}{8pt}{6pt}
+\titlespacing*{\subsection}{0pt}{6pt}{4pt}
+% \titlespacing*{\subsubsection}{0pt}{4pt}{2pt}
 % \titlespacing*{\chapter}{0pt}{-80pt}{10pt}
 
+\titleformat{\chapter}
+  [display]
+  {\raggedleft}
+  {\Large\mdseries \chaptername~ \thechapter}
+  {1ex}
+  {\Huge\bfseries}
+  [\vspace{5pt}\titlerule]
+
+\usepackage{etoolbox}
+
+\preto\appendix{%
+  \titleformat{\chapter}[display]
+    {\raggedleft}
+    {\Large\mdseries \appendixname ~\thechapter}
+    {1ex}
+    {\Huge\bfseries}
+    [\vspace{5pt}\titlerule]
+}
+
+\renewcommand{\chaptername}{Capítulo}%
 \renewcommand{\appendixname}{Apéndice}
+% \renewcommand{\appendixname}{Apéndice}
 
 \usepackage{colortbl}
 \usepackage{algorithm}
@@ -41,6 +84,8 @@
 
 % % Nomenclatura
 \usepackage{nomencl}
+% \usepackage{tocbibind} % Nomenclatura en índice.
+\renewcommand{\nomname}{Nomenclatura}
 \newcommand{\nomunit}[1]{\hfill[#1]}
 % \newcommand{\nomeqref}[1]{\hfill( #1 )}
 % \newcommand{\nompageref}[1]{\hfill p.~#1}
@@ -72,22 +117,10 @@
 \definecolor{tabla2}{RGB}{189,215,238}
 
 \renewcommand\sfdefault{phv}
-% % \renewcommand\mddefault{mc}
-% % %\renewcommand\bfdefault{bc}
-% % \setganttlinklabel{s-s}{S -> S}
-% % \setganttlinklabel{f-s}{F -> S}
-% % \setganttlinklabel{f-f}{F -> F}
-% % \sffamily
-
-% \yyyymmdddate
-% %%\today
-
-%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % % Change this to change the some Meta Data in the *.pdf file
 % % See hyperref documentation for information on those parameters
-
 \hypersetup{
     colorlinks=true,
     citecolor=citecol,
@@ -213,7 +246,36 @@
 }
 {\vspace*{\fill}\par\pagebreak}
 
-\input{otros/contactDetails}
+
+% ==========================================
+% NEW COMMANDS de Formato PUJ
+
+% Fecha
+\newcommand{\fechavar}[1]{\def \fecha{#1}}
+
+% Nombre del Trabajo
+\newcommand{\titulo}[1]{\def \titulovar{#1}}
+
+% Nombre de los directores del proyecto
+\newcommand{\directorproyecto}[2]{\def \director{#1 #2}}
+\newcommand{\codirectorproyecto}[2]{\def \codirector{#1 #2}}
+
+% Nombre del director de carrera
+\newcommand{\directorcarrera}[2]{\def \directorIE{#1 #2}}
+% Primer autor
+\newcommand{\autorA}[2]{\def \authorA{#2}\def \authorACOD{#1}}
+% Segundo autor
+\newcommand{\autorB}[2]{\def \authorB{#2}\def \authorBCOD{#1}}
+
+% TeK
+% Nombre del decano de la FIC
+\newcommand{\decanoFIC}[2]{\def \deanFIC{#1 #2}}
+% Jurados
+\newcommand{\juradoA}[2]{\def \juryA{#1 #2}}
+\newcommand{\juradoB}[2]{\def \juryB{#1 #2}}
+% ==========================================
+% \input{otros/thesisInfo}
+% ==========================================
 
 \usepackage{xcolor}
 % \definecolor{linkred}{RGB}{120,0,40}
@@ -238,3 +300,25 @@
 % \setcounter{dbltopnumber}{2}
 % \renewcommand{\dbltopfraction}{0.7}
 % \renewcommand{\dblfloatpagefraction}{0.5}
+
+% % OTROS MSC
+% @article{CurveFitFreq,
+%     title={ Frequency Estimation using Curve Fitting },
+%     authors={ Matthew Strickland and Dani Strickland and Simon J Royston and Artis Riepnieks },
+%     year={ 2020 },
+%     doi={ 10.1109/ICRERA49962.2020.9242667 },
+% }
+% @article{loglike,
+%     title={ Comparison of Akaike information criterion (AIC) and Bayesian information criterion (BIC) in selection of stock–recruitment relationships },
+%     authors={ Yanjun Wang and Qun Liu },
+%     journal={ Fisheries Research },
+%     year={ 2006 },
+%     doi={ 10.1016/J.FISHRES.2005.08.011 },
+% }
+% @misc{matlabmixed,
+%   author = {{The MathWorks, Inc.}},
+%   title = {Mixed-Effects Models},
+%   year = 2022,
+%   url = {https://www.mathworks.com/help/stats/mixed-effects-models.html},
+%   urldate = {2022-10-20}
+% }

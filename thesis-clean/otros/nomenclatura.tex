@@ -7,10 +7,9 @@
 
 % \renewcommand{\nomname}{Nomenclatura}
 
-\DeclareRobustCommand{\SkipTocEntry}[5]{}
-\addtocontents{toc}{\SkipTocEntry}
+% \DeclareRobustCommand{\SkipTocEntry}[5]{}
+% \addtocontents{toc}{\SkipTocEntry}
 
-\makenomenclature\label{nomenclatura}
 
 \renewcommand\nomgroup[1]{%
   \item[\bfseries
@@ -23,8 +22,8 @@
 % \section*{Símbolos}
 
 \nomenclature[S]{$\alpha_{s}$}{Ingesta total de
-alimento. \nomunit{[\%]}}
-\nomenclature[S]{$\alpha_{x}$}{Ingesta total de: forrajes (x=f), concentrado (x=c) o agua (x=a). \nomunit{[\%]}}
+alimento. \nomunit{\%}}
+\nomenclature[S]{$\alpha_{x}$}{Ingesta total de: forrajes (x=f), concentrado (x=c) o agua (x=a). \nomunit{\%}}
 \nomenclature[S]{$\chi^{2}$ , $\chi^{2}_{red}$}{Factor ``chi'' cuadrado, Factor ``chi'' cuadrado reducido}
 % \nomenclature[S]{$\chi^{2}_{red}$}{Factor ``chi'' cuadrado reducido}
 
@@ -53,4 +52,4 @@ alimento. \nomunit{[\%]}}
 \nomenclature[T]{$EDO$}{Ecuaciones Diferenciales Ordinarias}
 
 
-\printnomenclature[3cm]
+% \printnomenclature[3cm]

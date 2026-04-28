@@ -1,0 +1,143 @@
+% ==============================================
+% About: TITULO PORTADA MONOGRAFIA TESIS
+% Description: Portada de monografia de trabajo
+% de grado con titulo, autor director fecha
+% ==============================================
+% OBS: ThesisInfo ya tiene que estar creado
+% ==============================================
+% \if@titlepage    %%% Title and Portrait page with Uni Logo.png
+    \newcommand\maketitlepuj{
+        \begin{titlepage}% Define Maketitle version PUJ
+            \let\footnotesize\small
+            \let\footnoterule\relax
+            \let \footnote \thanks
+            \null\vfil
+            \begin{center}
+                \includegraphics[width=\textwidth]{./images/MSc/IngEl_FIC_PUJC.png}
+                \vskip 3em
+                \Large{MONOGRAF\'IA DE TRABAJO DE GRADO}
+                \vskip 3em
+                {\huge \titulovar \par}
+                \vskip 3em
+                {
+                    \begin{tabular}[t]{c}
+                        \LARGE \authorA \\ \\
+                        \LARGE \authorB \\
+
+
+                        \ifthenelse{\equal{\codirector}{}}
+                        {\Large Director \director
+                        \textit{Codirector} \codirector}
+                        {\Large Director \\
+                        \director}
+                    \end{tabular}\par
+                }
+                \vskip 3em
+                {\LARGE \fecha \par}
+            \end{center}
+            %   Anteproyecto de Grado.
+            % \end{center}
+            %\vspace{2cm}
+            %  \begin{center}%
+            %    {\LARGE \titulovar \par}%
+            %    \vskip 3em%
+            %    {\large
+            %     \lineskip .75em%
+            %      \begin{tabular}[t]{c}%
+            %        \authorA\\
+            %        \authorB\\\\
+            %	Director: \director
+            %	%Codirector: \codirector
+            %      \end{tabular}\par}%
+            %      \vskip 1.5em%
+            %	\vspace{1cm}
+            %    %{\large \fechavar \par}%       % Set date in \large size.
+            %    {\LARGE  \today \par}%       % Set date in \large size.
+            %  \end{center}\par
+            % \@thanks
+            % \vfil\null
+            %\begin{center}
+            %\includegraphics[width=8cm]{./img/pujlogo.png}
+            %\end{center}
+
+        \end{titlepage}%
+        \setcounter{footnote}{0}%
+        % \global\let\thanks\relax
+        % \global\let\maketitle\relax
+        % \global\let\@thanks\@empty
+        % \global\let\@author\@empty
+        % \global\let\@date\@empty
+        % \global\let\@title\@empty
+        % \global\let\title\relax
+        % \global\let\author\relax
+        % \global\let\date\relax
+        % \global\let\and\relax
+
+        \cleardoublepage
+
+    }
+
+    % ==============================================
+    % % HASTA AQUI VERSION DE LA PUJ
+    % % DEL ELSE EN ADELANTE ES LA VERSION BASICA DE LATEX
+    % ==============================================
+% \else
+%     \newcommand\maketitle{\par
+%         \begingroup
+%             \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+%             \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+%             \long\def\@makefntext##1{
+%                 \parindent 1em\noindent
+%                 \hb@xt@1.8em{
+%                     \hss\@textsuperscript{\normalfont\@thefnmark}
+%                 }
+%             ##1}%
+%             \if@twocolumn
+%               \ifnum \col@number=\@ne
+%                 \@maketitle
+%               \else
+%                 \twocolumn[\@maketitle]%
+%               \fi
+%             \else
+%               \newpage
+%               \global\@topnum\z@   % Prevents figures from going at top of page.
+%               \@maketitle
+%             \fi
+%             \thispagestyle{plain}\@thanks
+%         \endgroup
+%         \setcounter{footnote}{0}%
+%         \global\let\thanks\relax
+%         \global\let\maketitle\relax
+%         \global\let\@maketitle\relax
+%         \global\let\@thanks\@empty
+%         \global\let\@author\@empty
+%         \global\let\@date\@empty
+%         \global\let\@title\@empty
+%         \global\let\title\relax
+%         \global\let\author\relax
+%         \global\let\date\relax
+%         \global\let\and\relax
+%     }
+
+
+% \def\@maketitle{%
+%   \newpage
+%   \null
+%   \vskip 2em%
+%   \begin{center}%
+%   \let \footnote \thanks
+%   {\LARGE \@title \par}%
+%   \vskip 1.5em%
+%   {
+%     \large
+%     \lineskip .5em%
+%     \begin{tabular}[t]{c}%
+%         \@author
+%     \end{tabular}\par
+%   }
+%   \vskip 1em%
+%   {\large \@date}%
+%   \end{center}%
+%   \par
+%   \vskip 1.5em}
+% \fi
