@@ -8,16 +8,16 @@ En esta etapa, se procede a recolectar todos los datos análogos y digitales con
 
 \section{Recolección de datos} \label{datarecol}
 
-Tal y como se mencionó en el capítulo anterior, los datos referentes a Peso, Leche y Alimentación, de cada una de las reses del CA-SENA-POP se encuentran registradas de manera física o digital; ya sea en hojas impresas como el ejemplar de la Figura \ref{regleche1png}, así como también en bases de datos digitales como el de la Figura \ref{tauruspng}. No obstante, estos datos \textbf{no} pueden ser importados directamente a algún software de procesamiento de datos. Esto puesto que para los datos físicos, se tienen algunas barreras y/o inconvenientes externos tales como los diferentes tipos de letra,  el estado físico de las paginas, y la diferencia entre los números de un ente registrado u otro; mientras que para los datos digitales, estos se encuentran almacenados en el software de pago de manera privada, siendo datos protegidos de acuerdo a la \textbf{Ley de ``Habeas data''}, por lo que no pueden ser exportados directamente para manipulación del público.\\ % Feb  2023
+Tal y como se mencionó en el capítulo anterior, los datos referentes a Peso, Leche y Alimentación, de cada una de las reses del CA-SENA-POP se encuentran registradas de manera física o digital; ya sea en hojas impresas como el ejemplar de la Figura \ref{regleche1png}, así como también en bases de datos digitales como el de la Figura \ref{tauruspng}. No obstante, estos datos \textbf{no} pueden ser importados directamente a algún software de procesamiento de datos. Esto puesto que para los datos físicos, se tienen algunas barreras y/o inconvenientes externos tales como los diferentes tipos de letra,  el estado físico de las paginas, y la diferencia entre los números de un ente registrado u otro; mientras que para los datos digitales, estos se encuentran almacenados en el software de pago de manera privada, siendo datos protegidos de acuerdo a la \textbf{Ley de ``Habeas data''}, por lo que no pueden ser exportados directamente para manipulación del público. % Feb  2023
 
 % \subsection{Registros de ``Leche''}
-Teniendo en cuenta que los datos de producción lechera se registran de manera manual, esta tarea es llevada a cabo por distintas personas. Desde aprendices hasta instructores y supervisores; por lo tanto, los datos son escritos por distintas personas, que manejan distintos tipos de letra, distinto orden, distintas prácticas adecuadas de escritura, entre otras. Esto implica que los números registrados en las paginas físicas varíen de un tipo de letra a otra y deban ser analizados o copiados rigurosamente de manera digital. Además, es importante mencionar, que estas carpetas físicas de registro de datos, son expuestas a la intemperie, por lo que algunos registros han sido vulnerables ante lluvias, o sustancias que alteran el estado de la hoja de papel, dificultando así su interpretación a primera vista.\\
+Teniendo en cuenta que los datos de producción lechera se registran de manera manual, esta tarea es llevada a cabo por distintas personas. Desde aprendices hasta instructores y supervisores; por lo tanto, los datos son escritos por distintas personas, que manejan distintos tipos de letra, distinto orden, distintas prácticas adecuadas de escritura, entre otras. Esto implica que los números registrados en las paginas físicas varíen de un tipo de letra a otra y deban ser analizados o copiados rigurosamente de manera digital. Además, es importante mencionar, que estas carpetas físicas de registro de datos, son expuestas a la intemperie, por lo que algunos registros han sido vulnerables ante lluvias, o sustancias que alteran el estado de la hoja de papel, dificultando así su interpretación a primera vista.
 
 Es importante hacer esta observación, dado que por estas mismas circunstancias, \textbf{no} es posible extraer los datos de las tablas mediante algoritmos de inteligencia artificial de procesamiento de imágenes de manera consistente, pues estos datos pueden ser fácilmente tergiversados o malinterpretados como los ejemplares de la Figura \ref{datosamanopng}.
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=1.05]{img/datosamano.jpg}
+	 \includegraphics[scale=1.05]{datosamano.jpg}
 	 \end{center}
 	 \caption{Ejemplares de datos físicos con malas prácticas de escritura. \label{datosamanopng}}
 \end{figure}
@@ -26,9 +26,9 @@ En cuanto a los registros de peso, dado que la cantidad de datos no es tan exten
 
 \section{Digitalización de los datos de producción lechera}
 
-Teniendo en cuenta la descripción anterior, los datos fueron escaneados y posteriormente fueron transcritos de manera individual. Los datos utilizados en este trabajo consisten en los registros de producción lechera de distintas vacas que han entrado y salido de la producción ganadera, ya sea por motivos de compraventa, ingreso a gestación, salida por periodo de secado,  enfermedad, deceso, edad o cantidad de partos.\\
+Teniendo en cuenta la descripción anterior, los datos fueron escaneados y posteriormente fueron transcritos de manera individual. Los datos utilizados en este trabajo consisten en los registros de producción lechera de distintas vacas que han entrado y salido de la producción ganadera, ya sea por motivos de compraventa, ingreso a gestación, salida por periodo de secado,  enfermedad, deceso, edad o cantidad de partos.
 
-Los datos aquí utilizados comprenden fechas desde el 31 de Diciembre de 2018, hasta el 24 de Julio de 2022. En total se transcribieron de forma manual un total de $85.932$  datos, de los cuales, $37.956$ son datos numéricos representativos que pueden usarse para procesamiento de datos. Los $47.976$ datos restantes son datos categóricos que representan periodos de secado, horra, datos inexistentes o ilegibles, o registros desconocidos clasificados como datos NAN. Se cuenta con un total de 4 archivos pdf, en donde se almacenan los escaneos de los datos que comprenden esas fechas ya mencionadas.\\
+Los datos aquí utilizados comprenden fechas desde el 31 de Diciembre de 2018, hasta el 24 de Julio de 2022. En total se transcribieron de forma manual un total de $85.932$  datos, de los cuales, $37.956$ son datos numéricos representativos que pueden usarse para procesamiento de datos. Los $47.976$ datos restantes son datos categóricos que representan periodos de secado, horra, datos inexistentes o ilegibles, o registros desconocidos clasificados como datos NAN. Se cuenta con un total de 4 archivos pdf, en donde se almacenan los escaneos de los datos que comprenden esas fechas ya mencionadas.
 
 Esta tarea de transcripción de datos tomó un tiempo aproximado de 1 semana;7 días, en jornadas de 8 horas cada día. Los datos que poseían dificultades de lectura e interpretación fueron corroborados con base en los datos de producción diaria neta y producción neta individual de cada vaca, datos existentes en las tablas escaneadas; por lo que se reduce el riesgo de transcripción de datos erróneos por causas humanas.
 
@@ -42,7 +42,7 @@ Una vez que se transcribieron los datos de manera individual para cada vaca. se 
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.335]{img/dfinicial.jpg}
+	 \includegraphics[scale=0.335]{dfinicial.jpg}
 	 \end{center}
 	 \caption{Reestructuración inicial de los datos de producción de leche transcritos. \label{dfinicialpng}}
 \end{figure}
@@ -67,7 +67,7 @@ Una vez que se transcribieron los datos de manera individual para cada vaca. se 
 
 \subsection{``Debugging'' y verificación de datos}
 
-Como la transcripción de los datos se realiza de forma manual, existe el riesgo de añadir error humano a mediciones que ya cuentan con errores de medición y escritura. Para disminuir este error de transcripción, se verificó uno a uno los valores, antes, durante y después del proceso de transcripción. No obstante puede que se hayan pasado valores por alto como reflejo de un error humano.\\
+Como la transcripción de los datos se realiza de forma manual, existe el riesgo de añadir error humano a mediciones que ya cuentan con errores de medición y escritura. Para disminuir este error de transcripción, se verificó uno a uno los valores, antes, durante y después del proceso de transcripción. No obstante puede que se hayan pasado valores por alto como reflejo de un error humano.
 
 Para ello, una vez obtenida la matriz agrupada en Excel, se verifican los tipos de datos y se corrobora que la cantidad neta de cada grupo sumen la cantidad total de datos. En caso contrario, el valor en cuestión se puede identificar el índice de la(s) muestra(s) no identificada(s) y mediante la fecha en la que fue(ron)  tomada(s), se puede corroborar tanto en la tabla de Excel, como en los archivos pdf escaneados.
 
@@ -81,7 +81,7 @@ Notese que en la reestructuración inicial se puede observar que los datos puede
 \end{itemize}
 
 
-Así pues, se conforma un primer archivo de excel con todos los registros existentes hasta la fecha del 24 de Julio del 2022. Es importante mencionar que el balance existente entre datos numéricos útiles para procesamiento y análisis, con datos de tipo NAN es  aproximadamente de 90\% contra menos del 10\% respectivamente. Y en comparación de datos de tipo NAN con datos conocidos, ya sean numéricos representativos o datos categóricos transformados; el porcentaje de balance disminuye hasta un 5.6\%.\\
+Así pues, se conforma un primer archivo de excel con todos los registros existentes hasta la fecha del 24 de Julio del 2022. Es importante mencionar que el balance existente entre datos numéricos útiles para procesamiento y análisis, con datos de tipo NAN es  aproximadamente de 90\% contra menos del 10\% respectivamente. Y en comparación de datos de tipo NAN con datos conocidos, ya sean numéricos representativos o datos categóricos transformados; el porcentaje de balance disminuye hasta un 5.6\%.
 
 De esta manera se puede considerar que los datos de tipo NAN no son significativos para los análisis posteriores, y pueden pasarse por alto o reemplazarse con métodos de imputación, sin afectar negativamente los análisis a futuro.
 % se puede corroborar en DATAF SENA 2022 AGO 21 DATA RAW NUM - SUPER VACA
@@ -89,26 +89,26 @@ De esta manera se puede considerar que los datos de tipo NAN no son significativ
 \pagebreak
 
 \subsection{Clasificación, Selección y Agrupación de datos de leche}
-Teniendo en cuenta la base de datos estructurada en el punto anterior, es importante cuestionarse sí estos datos pueden representar matemáticamente toda la producción de leche del CA-SENA-POP, pues aunque son datos que evidencian la producción neta de la granja, estos datos dispersos no permiten una aproximación mediante funciones y/o modelos matemáticos, ni mucho menos posibilitan el modelamiento dinámico mediante ecuaciones diferenciales. Por lo tanto es imprescindible estimar una o varias funciones que representen de manera aproximada, los datos obtenidos.\\
+Teniendo en cuenta la base de datos estructurada en el punto anterior, es importante cuestionarse sí estos datos pueden representar matemáticamente toda la producción de leche del CA-SENA-POP, pues aunque son datos que evidencian la producción neta de la granja, estos datos dispersos no permiten una aproximación mediante funciones y/o modelos matemáticos, ni mucho menos posibilitan el modelamiento dinámico mediante ecuaciones diferenciales. Por lo tanto es imprescindible estimar una o varias funciones que representen de manera aproximada, los datos obtenidos.
 
-Es decir, que se debe considerar un ajuste de curvas a los datos existentes para aproximar la producción neta mediante funciones y modelos matemáticos. Por otra parte es importante tener en cuenta que las producciones de leche de cada animal, varían según el número de partos que hayan experimentado con anterioridad. Las vacas primíparas que recién están produciendo leche, no tendrán un rendimiento equiparable a comparación de las vacas que ya se encuentran en un 3er o 4to parto; en consecuencia es plausible realizar una clasificación de vacas por su cantidad de partos y observar el comportamiento de las producciones lecheras para cada grupo de partos.\\
+Es decir, que se debe considerar un ajuste de curvas a los datos existentes para aproximar la producción neta mediante funciones y modelos matemáticos. Por otra parte es importante tener en cuenta que las producciones de leche de cada animal, varían según el número de partos que hayan experimentado con anterioridad. Las vacas primíparas que recién están produciendo leche, no tendrán un rendimiento equiparable a comparación de las vacas que ya se encuentran en un 3er o 4to parto; en consecuencia es plausible realizar una clasificación de vacas por su cantidad de partos y observar el comportamiento de las producciones lecheras para cada grupo de partos.
 
 \subsubsection{Clasificación de Datos}\label{clasdatos}
 
-Así pues, con base en las observaciones anteriores y partiendo de los datos existentes del CA-SENA-POP, tendremos 6 grupos distintos de partos. $Parto_{i}$, con i=1...6\\
+Así pues, con base en las observaciones anteriores y partiendo de los datos existentes del CA-SENA-POP, tendremos 6 grupos distintos de partos. $Parto_{i}$, con i=1...6
 
-Notese que los datos previamente estructurados cuentan con los registros de producción lechera desde el año 2018 hasta el año 2022, con todos los registros existentes para cada una de las vacas. No obstante, en este periodo de tiempo, en los documentos físicos no se específica el número de parto de cada animal. En algunos casos se ha hecho la observación, mas sin embargo no aplica para todas las reses. Observese además, que los partos entre las vacas no están sincronizados; por lo que esta clasificación permite identificar qué vacas son contemporáneas con otras. Por ende, es necesario acudir a la base de datos digital del software TaurusWebs con el que cuenta el centro agropecuario; para hacer una validación cruzada de los datos.\\
+Notese que los datos previamente estructurados cuentan con los registros de producción lechera desde el año 2018 hasta el año 2022, con todos los registros existentes para cada una de las vacas. No obstante, en este periodo de tiempo, en los documentos físicos no se específica el número de parto de cada animal. En algunos casos se ha hecho la observación, mas sin embargo no aplica para todas las reses. Observese además, que los partos entre las vacas no están sincronizados; por lo que esta clasificación permite identificar qué vacas son contemporáneas con otras. Por ende, es necesario acudir a la base de datos digital del software TaurusWebs con el que cuenta el centro agropecuario; para hacer una validación cruzada de los datos.
 
 Una vez obtenido el permiso y una copia de la base de datos actual, suministrada por el encargado Daniel Cobo. se puede acceder al software con una versión gratuita de prueba; licencia que satisface la posibilidad de consultar las fechas de parto de cada bovino. Esto se logra gracias a la trazabilidad con la que cuenta este software y se puede hacer contraste con los datos previamente estructurados; dándose la posibilidad de clasificar los datos según el parto al que corresponden para cada ternera:
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.45]{img/dfcolorpartos.jpg}
+	 \includegraphics[scale=0.45]{dfcolorpartos.jpg}
 	 \end{center}
 	 \caption{Clasificación de datos por \#Parto para cada vaca. \label{colorpartospng}}
 \end{figure}
 
-En la Figura \ref{colorpartospng} se puede observar que la clasificación de los partos se realiza con base en la estructuración de datos tanto categóricos como numéricos. Esto con el objetivo de diferenciar de manera visual entre un periodo de producción de leche a un periodo de secado (Casilla blanca con borde de color y casillas coloreadas de color azul respectivamente). No obstante una vez realizada la clasificación, selección y agrupación de datos; las matrices usadas en los análisis posteriores con algoritmos en Matlab, manejan la estructuración numérica descrita en la sub-Sección \ref{clasdatos}.\\
+En la Figura \ref{colorpartospng} se puede observar que la clasificación de los partos se realiza con base en la estructuración de datos tanto categóricos como numéricos. Esto con el objetivo de diferenciar de manera visual entre un periodo de producción de leche a un periodo de secado (Casilla blanca con borde de color y casillas coloreadas de color azul respectivamente). No obstante una vez realizada la clasificación, selección y agrupación de datos; las matrices usadas en los análisis posteriores con algoritmos en Matlab, manejan la estructuración numérica descrita en la sub-Sección \ref{clasdatos}.
 
 Percátese que al tener 6 grupos de partos en el CA-SENA-POP, se utiliza un código de colores para la clasificación de producción por \# de Parto, siendo esta la siguiente:
 
@@ -150,26 +150,26 @@ Así pues, se obtienen 6 grupos de un tamaño variable de registros de lactancia
 
 \subsubsection{Selección de Datos}
 
-Una de las primeras observaciones obtenidas al realizar la agrupación inicial por partos como la observada en la Tabla \ref{porpartos}; es que los datos existentes que han sido agrupados no poseen igual cantidad de datos para cada res dentro de un mismo grupo de parto. Esto se produce dado que los partos varían en cuestión de duración para cada animal. En primera instancia esto no debería suponer un problema significativo, pues en caso que los partos posean una ligera variabilidad de muestras; bastaría con ``rellenar'' los datos faltantes con ceros o con imputación de datos como la media o la moda; ó por otra parte, bastaría con realizar una agrupación con igual cantidad de muestras.\\
+Una de las primeras observaciones obtenidas al realizar la agrupación inicial por partos como la observada en la Tabla \ref{porpartos}; es que los datos existentes que han sido agrupados no poseen igual cantidad de datos para cada res dentro de un mismo grupo de parto. Esto se produce dado que los partos varían en cuestión de duración para cada animal. En primera instancia esto no debería suponer un problema significativo, pues en caso que los partos posean una ligera variabilidad de muestras; bastaría con ``rellenar'' los datos faltantes con ceros o con imputación de datos como la media o la moda; ó por otra parte, bastaría con realizar una agrupación con igual cantidad de muestras.
 
-Sin embargo, estas contramedidas no pueden ser llevadas a cabo en razón de que los datos existentes facilitan la agrupación por partos, mas no garantiza que los datos de un parto en específico se encuentren disponibles en su totalidad. En otras palabras, muchos de los datos que se tienen para cada parto son datos de inicio de producción o finalización de producción de leche de las terneras, tanto para las que fallecen, para las que se venden, así como también, para las que a fecha del 31 de Diciembre del 2018 ya se encontraban en periodo productivo.\\
+Sin embargo, estas contramedidas no pueden ser llevadas a cabo en razón de que los datos existentes facilitan la agrupación por partos, mas no garantiza que los datos de un parto en específico se encuentren disponibles en su totalidad. En otras palabras, muchos de los datos que se tienen para cada parto son datos de inicio de producción o finalización de producción de leche de las terneras, tanto para las que fallecen, para las que se venden, así como también, para las que a fecha del 31 de Diciembre del 2018 ya se encontraban en periodo productivo.
 
 Si se realiza una representación visual individual de los datos pertenecientes al grupo de parto \#1, se puede observar en la Figura \ref{partosincompletospng} que algunas reses tienen muy pocos datos (celdas vacías), lo que ``recargaría'' la distribución hacia los extremos, dificultando su análisis descriptivo (Esta observación se cumple para los otros grupos de parto). Por otra parte, si se hace un contraste de datos del grupo de parto\#1 teniendo como punto de referencia el inicio de la producción o su finalización en el periodo de secado, la tabla de registros permite evidenciar el desbalance que manifiestan los datos:
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.34]{img/partosincompletos.jpg}
+	 \includegraphics[scale=0.34]{partosincompletos.jpg}
 	 \end{center}
 	 \caption{Desbalance de datos en agrupación inicial por partos. \label{partosincompletospng}}
 \end{figure}
 
-En la Figura \ref{partosincompletospng}, se evidencia el desbalance mencionado. Si se observan más a fondo los datos presentes en el archivo de Excel, específicamente en el grupo de parto \#1  de la Tabla \ref{porpartos}, 13 de las 19 reses pertenecientes a este grupo cuentan con menos de la mitad de muestras de producción lechera tras haber parido por primera vez. Por otro parte, solo una de ellas manifiesta un exceso de registros antes de entrar en periodo de secado y 5 mamíferos restantes aparentan tener la cantidad de muestras suficientes para representar el grupo de vacas primíparas. Las 5 vacas en cuestión son ``Lucia'', ``Sol'', ``Lunita'', ``Acerada'' y ``Martina''.\\
+En la Figura \ref{partosincompletospng}, se evidencia el desbalance mencionado. Si se observan más a fondo los datos presentes en el archivo de Excel, específicamente en el grupo de parto \#1  de la Tabla \ref{porpartos}, 13 de las 19 reses pertenecientes a este grupo cuentan con menos de la mitad de muestras de producción lechera tras haber parido por primera vez. Por otro parte, solo una de ellas manifiesta un exceso de registros antes de entrar en periodo de secado y 5 mamíferos restantes aparentan tener la cantidad de muestras suficientes para representar el grupo de vacas primíparas. Las 5 vacas en cuestión son ``Lucia'', ``Sol'', ``Lunita'', ``Acerada'' y ``Martina''.
 
 Finalmente, aunque todas las reses cuentan con la misma cantidad de datos, se procede a seleccionar únicamente a 3 de ellas que coinciden en el inicio y finalización de la producción de leche (``Sol'', ``Lunita'', ``Acerada''). Mientras que las otras 2, a pesar de tener la misma cantidad de muestras, presentan desfases en el inicio y finalización de la etapa productiva (``Lucia'' y ``Martina''). De esta forma, se puede generar la primera representación visual de los datos mediante un gráfico de dispersión, tal y como se observa en la Figura \ref{scatterparto1png}.
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.452]{img/scatterparto1.jpg}
+	 \includegraphics[scale=0.452]{scatterparto1.jpg}
 	 \end{center}
 	 \caption{Gráfico de dispersión para representar la producción lechera de las vacas primíparas. \label{scatterparto1png}}
 \end{figure}
@@ -180,7 +180,7 @@ El resultado obtenido tras realizar la primer representación visual de datos da
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.575]{img/desfaseAMPM.jpg}
+	 \includegraphics[scale=0.575]{desfaseAMPM.jpg}
 	 \end{center}
 	 \caption{Gráfico de dispersión para Muestras matutinas y vespertinas. \label{desfaseAMPMpng}}
 \end{figure}
@@ -192,7 +192,7 @@ Lo anterior se presta para realizar nuevamente una corroboración de los datos c
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.5835]{img/AMPMsindesfase.jpg}
+	 \includegraphics[scale=0.5835]{AMPMsindesfase.jpg}
 	 \end{center}
 	 \caption{Gráfico de dispersión para Muestras matutinas y vespertinas. \label{AMPMsindesfasepng}}
 \end{figure}
@@ -270,7 +270,7 @@ De acuerdo con la situación anterior, se concluye que realizar un análisis por
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.675]{img/svnetas.png}
+	 \includegraphics[scale=0.675]{svnetas.png}
 	 \end{center}
 	 \caption{Gráfico de dispersión para cada grupo de partos. \label{svnetaspng}}
 \end{figure}
@@ -443,12 +443,12 @@ Tal y como se mencionó en la Sección \ref{datarecol}, los datos referentes al 
 Esta transcripción de datos se realiza de tal forma que se mantienen los datos asociados a las fechas especificadas tal y como se puede observar en la Figura \ref{dfpesopng}.
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.5]{img/dfinicialpeso.jpg}
+	 \includegraphics[scale=0.5]{dfinicialpeso.jpg}
 	 \end{center}
 	 \caption{Reorganización inicial de los datos de peso.  \label{dfpesopng}}
 \end{figure}
 
-Sin embargo, tras realizar contrastes de fechas de registros de peso con las fechas de registros de leche, se encuentra con que \textbf{los registros de peso coinciden parcialmente con los registros de leche en un mismo periodo.} Esto quiere decir que de los pocos datos existentes respecto al peso, estos deben ser segmentados de acuerdo con el número de parto con el que coinciden las fechas de registro de producción de leche asociadas a la lactancia de ese parto. En función de lo expresado anteriormente, se debe realizar la segmentación de los datos de peso que pertenecen a cada parto (1..6) para cada vaca perteneciente a la Tabla \ref{porpartosfin} de la Subsección \ref{agrupdat}.\\
+Sin embargo, tras realizar contrastes de fechas de registros de peso con las fechas de registros de leche, se encuentra con que \textbf{los registros de peso coinciden parcialmente con los registros de leche en un mismo periodo.} Esto quiere decir que de los pocos datos existentes respecto al peso, estos deben ser segmentados de acuerdo con el número de parto con el que coinciden las fechas de registro de producción de leche asociadas a la lactancia de ese parto. En función de lo expresado anteriormente, se debe realizar la segmentación de los datos de peso que pertenecen a cada parto (1..6) para cada vaca perteneciente a la Tabla \ref{porpartosfin} de la Subsección \ref{agrupdat}.
 
 
 \subsection{Agrupación de datos de peso}
@@ -537,7 +537,7 @@ El método usado para realizar la interpolación entre los datos de peso son las
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.604]{img/InterPesos.jpg}
+	 \includegraphics[scale=0.604]{InterPesos.jpg}
 	 \end{center}
 	 \caption{Formato de nombre de columna para conjunto de datos. Varia en cuanto al nombre de la vaca, cantidad de muestras existentes y cantidad de parto. El código de colores se mantiene según la Tabla \ref{colorpartos} \label{interpesospng}}
 \end{figure}

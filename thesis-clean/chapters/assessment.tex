@@ -47,7 +47,7 @@ En cuanto a este objetivo, el modelo WP, planteado por el sistema de 2D de EDOs 
 
 \section{Metodología CRISP-DM}
 
-En lo que respecta a la metodología de estudio, las actividades llevadas a cabo en las etapas de la metodología CRISP-DM descritas en los capítulos anteriores pueden ser justificantes suficientes para corroborar si se ha hecho un debido manejo y procesamiento de datos, en especial, porque cada una de las acciones realizadas al conjunto de datos base ha sido detallada y justificada en cada capítulo en pro de satisfacer los objetivos de este trabajo de grado.\\
+En lo que respecta a la metodología de estudio, las actividades llevadas a cabo en las etapas de la metodología CRISP-DM descritas en los capítulos anteriores pueden ser justificantes suficientes para corroborar si se ha hecho un debido manejo y procesamiento de datos, en especial, porque cada una de las acciones realizadas al conjunto de datos base ha sido detallada y justificada en cada capítulo en pro de satisfacer los objetivos de este trabajo de grado.
 
 De manera general, se puede mencionar que:
 \begin{enumerate}
@@ -105,7 +105,7 @@ De manera general, se puede mencionar que:
 \end{table}
 \pagebreak
 
-Para realizar una evaluación crítica respecto a los ajustes no lineales de las curvas de lactancia para determinar si estos son representativos y significativos; es necesarios tener en consideración los criterios de MSE, RMSE; para cada uno de los métodos de ajustes no lineales realizados. (Levenberg-Marquardt ó LM, Fit Multiple ó FM, Efectos Mixtos ó EM). \\
+Para realizar una evaluación crítica respecto a los ajustes no lineales de las curvas de lactancia para determinar si estos son representativos y significativos; es necesarios tener en consideración los criterios de MSE, RMSE; para cada uno de los métodos de ajustes no lineales realizados. (Levenberg-Marquardt ó LM, Fit Multiple ó FM, Efectos Mixtos ó EM).
 
 
 \begin{table}[h]
@@ -150,7 +150,7 @@ Para realizar una evaluación crítica respecto a los ajustes no lineales de las
 }
 \end{table}
 
-En primera instancia, los ajustes no lineales realizados al inicio del Capítulo \ref{crisp4} evidencian características estadísticas con valores relativamente bajos de MSE y RMSE (ver Tabla \ref{msecompare} y Tabla \ref{rmsecompare}), así como también una reducción progresiva de los criterios AIC y BIC a medida que se comparan los métodos de ajuste de curvas por los algoritmos de efectos mixtos fijos y aleatorios no lineales (ver Tabla \ref{aicbiccompare} ) .\\
+En primera instancia, los ajustes no lineales realizados al inicio del Capítulo \ref{crisp4} evidencian características estadísticas con valores relativamente bajos de MSE y RMSE (ver Tabla \ref{msecompare} y Tabla \ref{rmsecompare}), así como también una reducción progresiva de los criterios AIC y BIC a medida que se comparan los métodos de ajuste de curvas por los algoritmos de efectos mixtos fijos y aleatorios no lineales (ver Tabla \ref{aicbiccompare} ) .
 
 \begin{table}[H]
 \centering
@@ -202,24 +202,24 @@ En primera instancia, los ajustes no lineales realizados al inicio del Capítulo
 }
 \end{table}
 
-Por lo tanto, es plausible afirmar que los ajustes realizados presentan una buena bondad de ajuste. (Para mayor información respecto a los características estadísticas de cada ajuste, consultar en \cite{msclfggprogrepo}, los scripts de Matlab ``AnaMixEffGenBeta2.m'' y ``lm\_exampGEN2023.m''.\\
+Por lo tanto, es plausible afirmar que los ajustes realizados presentan una buena bondad de ajuste. (Para mayor información respecto a los características estadísticas de cada ajuste, consultar en \cite{msclfggprogrepo}, los scripts de Matlab ``AnaMixEffGenBeta2.m'' y ``lm\_exampGEN2023.m''.
 % y comparar las estructuras STATSMEFIN, STATSNLME2 y STATSNLME2RF). \\
 
 
 \subsection{Producción neta real Vs Producción teórica por ajustes no lineales}
 
-Una forma de evaluar la adecuación de los ajustes no lineales de los parámetros del modelo de Wood es mediante la verificación del área bajo la curva generada por estos parámetros. Esta curva representa la producción neta de lactancia, obtenida a partir de los parámetros ajustados al modelo matemático de Wood. Para ello, se puede crear una tabla que contenga los valores de las producciones netas reales de grupo de parto (Producción Real ó PR) y se compare con las producciones netas estimadas (Producción estimada PT) por cada método de ajuste (ó ``Fit''). De esta manera, se puede determinar si los ajustes son capaces de representar los datos de cada vaca y, en última instancia, la producción total del hato. Esta comparación puede apreciarse en la Tabla \ref{prodparamscomparepng}, los valores de producción están en toneladas [t] y el total de ganancia por venta de leche ``$\$\$\$_{Total}$'' está en millones de pesos colombianos [COP].\\
+Una forma de evaluar la adecuación de los ajustes no lineales de los parámetros del modelo de Wood es mediante la verificación del área bajo la curva generada por estos parámetros. Esta curva representa la producción neta de lactancia, obtenida a partir de los parámetros ajustados al modelo matemático de Wood. Para ello, se puede crear una tabla que contenga los valores de las producciones netas reales de grupo de parto (Producción Real ó PR) y se compare con las producciones netas estimadas (Producción estimada PT) por cada método de ajuste (ó ``Fit''). De esta manera, se puede determinar si los ajustes son capaces de representar los datos de cada vaca y, en última instancia, la producción total del hato. Esta comparación puede apreciarse en la Tabla \ref{prodparamscomparepng}, los valores de producción están en toneladas [t] y el total de ganancia por venta de leche ``$\$\$\$_{Total}$'' está en millones de pesos colombianos [COP].
 
 En esta misma Figura se puede observar como el método no lineal que presenta mejor ajuste es el LMA, el cual, aunque no presenta los porcentaje de error más pequeños para todos los grupos de partos, si presenta un valor total más aproximado con respecto a la producción total  real de leche, basada en registros.
 
 % \pagebreak
 \subsection{Modelo EDO: Ajuste por mínimos cuadrados}
 
-Tal y como se menciona en la Sección \ref{optimizodeint}, una vez se ha hecho el llamado al solucionador de EDO ``odeint'' restringiendo los valores de cada parámetro $k_{i}$, se pueden obtener los parámetros que permiten el ajuste del modelo EDO a los datos de peso W y de materia producida P=L+E. \\
+Tal y como se menciona en la Sección \ref{optimizodeint}, una vez se ha hecho el llamado al solucionador de EDO ``odeint'' restringiendo los valores de cada parámetro $k_{i}$, se pueden obtener los parámetros que permiten el ajuste del modelo EDO a los datos de peso W y de materia producida P=L+E.
 
-Según se explica en el apartado de resultados de esa misma Sección, se puede ver como el modelo presenta una bondad de ajuste apropiada que, aunque no aplica para todas las reses de todos los partos, posee buenos criterios estadísticos como los criterios AIC y BIC bastante reducidos entre mejor es el ajuste, así como también un valor de $\chi^{2}$ reducido cercano a 1 (ver Figura \ref{ajustemodSolstatspng}). Por último pero no menos importante, se observa como para algunas reses en cada parto, los parámetros $k_{i}$ poseen errores relativos inferiores al 20\% lo que podría considerarse como un buen ajuste generalizado. \\
+Según se explica en el apartado de resultados de esa misma Sección, se puede ver como el modelo presenta una bondad de ajuste apropiada que, aunque no aplica para todas las reses de todos los partos, posee buenos criterios estadísticos como los criterios AIC y BIC bastante reducidos entre mejor es el ajuste, así como también un valor de $\chi^{2}$ reducido cercano a 1 (ver Figura \ref{ajustemodSolstatspng}). Por último pero no menos importante, se observa como para algunas reses en cada parto, los parámetros $k_{i}$ poseen errores relativos inferiores al 20\% lo que podría considerarse como un buen ajuste generalizado.
 
-Es importante mencionar que el modelo EDO-WP si bien puede presentar un buen ajuste para los datos asociados a algunas reses, no es un modelo perfecto por lo que no es sorpresa evidenciar que el modelo no presenta un buen ajuste para todas las reses. No obstante, esta observación también esta condicionada al hecho que no se cuentan con los datos apropiados de peso y producción de estiércol, lo que dificulta brindar un ajuste preciso para datos faltantes o especulativos.\\
+Es importante mencionar que el modelo EDO-WP si bien puede presentar un buen ajuste para los datos asociados a algunas reses, no es un modelo perfecto por lo que no es sorpresa evidenciar que el modelo no presenta un buen ajuste para todas las reses. No obstante, esta observación también esta condicionada al hecho que no se cuentan con los datos apropiados de peso y producción de estiércol, lo que dificulta brindar un ajuste preciso para datos faltantes o especulativos.
 
 Con base en lo anterior se puede establecer que el OE \#3 ha sido cumplido, en tanto que la solución numérica del modelo, permite lograr un ajuste bondadoso a los datos existentes. De igual manera se establece que el OE\#4 ha sido cumplido en tanto que el modelo EDO-WP ha sido evaluado con respecto a los datos empíricos recogidos, al mostrar buenas características estadísticas que permiten afirmar que presenta un buen ajuste respecto a los datos usados.
 
@@ -282,7 +282,7 @@ Con base en lo anterior se puede establecer que el OE \#3 ha sido cumplido, en t
 
 \section{Retroalimentación del proyecto con el cliente final}
 
-El desarrollo de este trabajo pudo ser llevado a cabo tras recibir una respuesta positiva por parte de un cliente (CA-SENA-POP) quien vió en este trabajo de grado, la oportunidad de iniciar un proceso de tecnificación enfocada hacia la industria 4.0 en el sector agropecuario; mediante un proyecto de investigación. Este cliente fue quien proporcionó los espacios y sobretodo los datos que permitieron que los conocimientos del estudiante de maestría, el \authorA, pudieran ser puestos en practica. Como  medida de evaluación del proyecto se considera pertinente tener en consideración la opinión que el cliente pueda tener respecto a cómo se trataron sus datos y qué resultados fueron obtenidos gracias a estos debido al proyecto de investigación llevado a cabo.\\
+El desarrollo de este trabajo pudo ser llevado a cabo tras recibir una respuesta positiva por parte de un cliente (CA-SENA-POP) quien vió en este trabajo de grado, la oportunidad de iniciar un proceso de tecnificación enfocada hacia la industria 4.0 en el sector agropecuario; mediante un proyecto de investigación. Este cliente fue quien proporcionó los espacios y sobretodo los datos que permitieron que los conocimientos del estudiante de maestría, el \authorA, pudieran ser puestos en practica. Como  medida de evaluación del proyecto se considera pertinente tener en consideración la opinión que el cliente pueda tener respecto a cómo se trataron sus datos y qué resultados fueron obtenidos gracias a estos debido al proyecto de investigación llevado a cabo.
 
 Por tal motivo, a continuación se describen los espacios de socialización que fueron llevados a cabo con el personal del CA-SENA-POP.
 
@@ -291,13 +291,13 @@ Por tal motivo, a continuación se describen los espacios de socialización que 
 Para esta primer socialización se contó con la asistencia de la coordinadora de formación profesional integral Maria del Carmen Agredo, el coordinador del centro agropecuario Daniel Cobo, el profesor y tutor, \director \hspace{0.1cm} y el \authorA, \hspace{0.1cm}quien realiza el proyecto. En esta reunión de poco mas de 20 minutos, se mostró cómo se usaron los datos oficiales proporcionados para que fueran procesados, analizados y clasificados para posteriormente estimar parámetros, realizar ajuste de datos; y finalmente establecer un modelo por EDOs que permitiese predecir el comportamiento de las variables de interés (Ver Figura \ref{tesispptsenapng}). (La presentación usada puede ser encontrada en el repositorio \cite{msclfggrepo}).
 
 Durante esta sesión, la coordinadora Maria del Carmen manifestó una opinión positiva respecto al desarrollo del proyecto, pues según sus palabras, aunque el SENA posee los recursos económicos y humanos para tecnificar su producción ganadera; no cuenta con un proceso sistemático ni con estudios de investigación a nivel de posgrado que soporten la toma de decisiones a futuro.
-En cuanto al manejo y procesamiento de los datos, el SENA se mostró satisfecho al ver que las interpretaciones sobre el conjunto de datos han sido apropiadas y acordes a lo que se maneja en el SENA en tanto que no se realizan suposiciones alejadas de la realidad y fueron soportadas por análisis pertinentes por parte del ingeniero Guevara.\\
+En cuanto al manejo y procesamiento de los datos, el SENA se mostró satisfecho al ver que las interpretaciones sobre el conjunto de datos han sido apropiadas y acordes a lo que se maneja en el SENA en tanto que no se realizan suposiciones alejadas de la realidad y fueron soportadas por análisis pertinentes por parte del ingeniero Guevara.
 
 Finalmente, la coordinadora Maria del Carmen y el coordinador Daniel Cobo manifestaron en su calidad como representantes del CA-SENA-POP, tener las puertas abiertas para formar una articulación entre la Pontificia Universidad Javeriana Cali y el SENA Popayán, pues manifiestan estar satisfechos con el proyecto de investigación realizado y esperan que futuros proyectos de pregrado o posgrado puedan ser llevados entre las 2 instituciones.
 Al finalizar la reunión, la señora Agredo solicitó una segunda reunión de manera presencial en la ciudad de Popayán para que los resultados númericos y visuales puedan ser expuestos al personal del CA-SENA-POP, en especial a la veterinaria Ana Maria Dorado quen no pudo asistir sino hasta el final de la reunión y quien junto con el señor Cobo, dirigen el centro agropecuario y sus intereses como cliente final de este estudio.
 
 \subsubsection{Socialización presencial: Viernes 19 de Mayo de 2023}
 
-Para esta segunda reunión, nuevamente se muestran los resultados del proyecto de manera que se pudieran evidenciar las virtudes y bondades que ofrece el modelamiento dinámico de sistemas de producción ganadera; y cómo este tipo de modelamiento permitiría pronosticar de manera aproximada el comportamiento productivo del sistema ganadero del SENA y de otros centros agropecuarios del país. Nuevamente, el personal directivo del SENA expresa su satisfacción respecto a los resultados expuestos y mediante una corta encuesta manifiesta tener una aceptación positiva del proyecto dando por terminada la sesión de retroalimentación del proyecto. \\
+Para esta segunda reunión, nuevamente se muestran los resultados del proyecto de manera que se pudieran evidenciar las virtudes y bondades que ofrece el modelamiento dinámico de sistemas de producción ganadera; y cómo este tipo de modelamiento permitiría pronosticar de manera aproximada el comportamiento productivo del sistema ganadero del SENA y de otros centros agropecuarios del país. Nuevamente, el personal directivo del SENA expresa su satisfacción respecto a los resultados expuestos y mediante una corta encuesta manifiesta tener una aceptación positiva del proyecto dando por terminada la sesión de retroalimentación del proyecto.
 
 Adicionalmente manifiestan que, aún cuando se cumplen con los objetivos y alcance de este proyecto, quedan expectantes ante futuros proyectos de investigación en el sector agropecuario; pues manifiestan que el SENA cuenta con los recursos biológicos y los espacios interdisciplinares apropiados para que el cuerpo estudiantil de la PUJ pueda poner en práctica sus proyectos de integración profesional en caso que lo requieran y lograr así una articulación educativa entre las 2 instituciones.

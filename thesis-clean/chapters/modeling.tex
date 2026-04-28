@@ -7,16 +7,16 @@ Al final del Capítulo \ref{crisp3}, se obtienen, tanto los datos referentes a l
 
 \section{Ajuste de Curvas mediante funciones No lineales}\label{ajustenonlin}
 
-A diferencia de los datos de leche, los datos interpolados del peso pueden presentar una variabilidad  creciente al rededor de un valor de equilibrio, o por el contrario ser asumidos como valores constantes desde la última medición existente (esto es, en aquellos casos que se desconocen lo registros de peso por motivos de fuerza mayor, como por ejemplo la Pandemia del SARS CoV 2, a la que se le atribuye que muchos datos no hayan sido medidos entre el 2020 y 2022). Cualquiera que sea el caso, el peso puede ser descrito a simple vista por una curva distinguible; esto dado que son curvas interpoladas basadas en un único conjunto de datos para cada res (Para mayor información sobre el proceso de interpolación de los datos de Peso, ver las Secciones \ref{splinescub} y \ref{pesosinterpolados}).\\
+A diferencia de los datos de leche, los datos interpolados del peso pueden presentar una variabilidad  creciente al rededor de un valor de equilibrio, o por el contrario ser asumidos como valores constantes desde la última medición existente (esto es, en aquellos casos que se desconocen lo registros de peso por motivos de fuerza mayor, como por ejemplo la Pandemia del SARS CoV 2, a la que se le atribuye que muchos datos no hayan sido medidos entre el 2020 y 2022). Cualquiera que sea el caso, el peso puede ser descrito a simple vista por una curva distinguible; esto dado que son curvas interpoladas basadas en un único conjunto de datos para cada res (Para mayor información sobre el proceso de interpolación de los datos de Peso, ver las Secciones \ref{splinescub} y \ref{pesosinterpolados}).
 
-Por su parte, la producción de leche grupal depende de la suma de las producciones de leche asociadas a cada grupo de partos; y para una representación individual los datos existentes poseen error añadido, ya sea por medición, error humano, error de aproximación, entre otros. Por tanto no es posible identificar una curva única que pueda representar a todos los datos de una forma generalizada. Para tener en consideración una curva representativa de los datos de cada parto, o una curva representativa de los datos de cada lactancia, se pueden realizar ajustes de curvas de lactancia, teniendo en consideración que ya existen modelos matemáticos probados para representar este tipo de datos. Entre estos modelos existentes, utilizaremos como referencia el modelo no lineal de Gamma Invertida de Wood, dado que según \cite{silvestre} y \cite{shanks}, es un modelo más que apropiado para aquellas curvas ``normales'' con una etapa creciente hasta el punto de producción máxima y una etapa decreciente hasta el periodo de secado.\\
+Por su parte, la producción de leche grupal depende de la suma de las producciones de leche asociadas a cada grupo de partos; y para una representación individual los datos existentes poseen error añadido, ya sea por medición, error humano, error de aproximación, entre otros. Por tanto no es posible identificar una curva única que pueda representar a todos los datos de una forma generalizada. Para tener en consideración una curva representativa de los datos de cada parto, o una curva representativa de los datos de cada lactancia, se pueden realizar ajustes de curvas de lactancia, teniendo en consideración que ya existen modelos matemáticos probados para representar este tipo de datos. Entre estos modelos existentes, utilizaremos como referencia el modelo no lineal de Gamma Invertida de Wood, dado que según \cite{silvestre} y \cite{shanks}, es un modelo más que apropiado para aquellas curvas ``normales'' con una etapa creciente hasta el punto de producción máxima y una etapa decreciente hasta el periodo de secado.
 % \pagebreak
 
 \subsection{Aplicación del método de ajuste no lineal: Algoritmo de Levenberg-Marquardt (LMA)}
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.576904]{img/lev1p1.png}
+	 \includegraphics[scale=0.576904]{lev1p1.png}
 	 \end{center}
 	 \caption{Ajustes de curvas de lactancia para Acerada y Lunita, Parto\#1.  \label{levenberg1}}
 \end{figure}
@@ -25,16 +25,16 @@ Teniendo en consideración que el método de LMA es implementado tomando como ba
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.57904]{img/parslev1.png}
+	 \includegraphics[scale=0.57904]{parslev1.png}
 	 \end{center}
-	 \caption{Convergencia de parámetros estimados del modelo de Wood para Acerada y Lunita. \label{levenberg1}}
+	 \caption{Convergencia de parámetros estimados del modelo de Wood para Acerada y Lunita. \label{parslev1png}}
 \end{figure}
 
 \subsection{Aplicación del método de ajuste no lineal: Algoritmo de Efectos Mixtos No Lineales (NLMEA)}
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.649]{img/nlinfit1spa.jpg}
+	 \includegraphics[scale=0.649]{nlinfit1spa.jpg}
 	 \end{center}
 	 \caption{Estimación de parámetros generales  mediante LMA, para el grupo de parto \#1 . \label{nlinfit1png}}
 \end{figure}
@@ -43,7 +43,7 @@ Para este caso, los sujetos de estudio son las reses de cada parto y se busca es
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.627]{img/nlinfitbox1spa.jpg}
+	 \includegraphics[scale=0.627]{nlinfitbox1spa.jpg}
 	 \end{center}
 	 \caption{Diagrama de cajas y bigotes para las reses del parto 1. \label{nlinfitbox1png}}
 \end{figure}
@@ -52,36 +52,36 @@ De la Figura \ref{nlinfitbox1png} se puede observar que los residuos de las rese
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.5869]{img/nlinfitmultiplespa.jpg}
+	 \includegraphics[scale=0.5869]{nlinfitmultiplespa.jpg}
 	 \end{center}
 	 \caption{Estimación de parámetros individuales en el parto \#1, Usando NLMEA-FE. \label{nlinfitmultiplepng}}
 \end{figure}
 
-Repitiendo este proceso de comparación, se puede observar que incluso para aquellos partos que cuentan con 7 reses, la estimación individualizada permite una disminución del  error cuadrático medio tanto de manera individual como de manera grupal (ver Tabla \ref{tab:allparams}, en el Anexo \ref{anexotaballparams}); concluyendo así, que el ajuste para efectos específicos representa mejor ajuste que el modelo generalizado.
+Repitiendo este proceso de comparación, se puede observar que incluso para aquellos partos que cuentan con 7 reses, la estimación individualizada permite una disminución del  error cuadrático medio tanto de manera individual como de manera grupal (ver Tabla \ref{tab:allparams}, en el Anexo \ref{tabAllParamsanexus}); concluyendo así, que el ajuste para efectos específicos representa mejor ajuste que el modelo generalizado.
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.69]{img/nlinfitboxmultiplespa.jpg}
+	 \includegraphics[scale=0.69]{nlinfitboxmultiplespa.jpg}
 	 \end{center}
 	 \caption{Diagrama de cajas y bigotes individualizado para las reses del parto 1. \label{nlinfitbox2png}}
 \end{figure}
 
-Por otra parte, los diagramas de cajas y bigotes también muestran una mejoría notable, pues se evidencia que los residuos del ajuste tienden a estar centrados en 0, y el tamaño de las cajas disminuye a comparación del modelo anterior. Aún cuando este ajuste ha probado tener mejores resultados que el ajuste no lineal por el método de LM, y explica con éxito las variaciones debidas a los sujetos específicos del estudio, no considera a los sujetos como representantes de una población más grande, esto es, para casos donde se tuvieran más sujetos de estudio a comparación de los existentes.\\
+Por otra parte, los diagramas de cajas y bigotes también muestran una mejoría notable, pues se evidencia que los residuos del ajuste tienden a estar centrados en 0, y el tamaño de las cajas disminuye a comparación del modelo anterior. Aún cuando este ajuste ha probado tener mejores resultados que el ajuste no lineal por el método de LM, y explica con éxito las variaciones debidas a los sujetos específicos del estudio, no considera a los sujetos como representantes de una población más grande, esto es, para casos donde se tuvieran más sujetos de estudio a comparación de los existentes.
 
 El propósito de los modelos de efectos mixtos es dar cuenta de las variaciones específicas de los sujetos de manera más amplia, como efectos aleatorios que varían en torno a las medias de la población. Por tal motivo se considera pertinente realizar un análisis complementario para un ajuste no lineal con efectos mixtos aleatorios.
 
 
 \subsection{Aplicación del método de ajuste no lineal: Algoritmo de Efectos Mixtos No Lineales con Efectos Aleatorios (NLMEA-RE)}
 
-En este caso, el método de ajuste no lineal utilizado con anterioridad es cambiado por la función de ajuste no lineal de efectos mixtos ``nlmefit'', la que por defecto  asigna efectos aleatorios a todos los parámetros del modelo. También de forma predeterminada, asume una matriz sin covarianza entre los efectos aleatorios para evitar la parametrización excesiva y los problemas de convergencia relacionados. De esta función utilizada en Matlab, se pueden extraer algunos criterios adicionales que pueden complementar las decisiones tomadas en el método, como por ejemplo la reducción de los parámetros AIC y BIC (Para mayor información ver la Secciones \ref{aiclabel} y \ref{biclabel} ).\\
+En este caso, el método de ajuste no lineal utilizado con anterioridad es cambiado por la función de ajuste no lineal de efectos mixtos ``nlmefit'', la que por defecto  asigna efectos aleatorios a todos los parámetros del modelo. También de forma predeterminada, asume una matriz sin covarianza entre los efectos aleatorios para evitar la parametrización excesiva y los problemas de convergencia relacionados. De esta función utilizada en Matlab, se pueden extraer algunos criterios adicionales que pueden complementar las decisiones tomadas en el método, como por ejemplo la reducción de los parámetros AIC y BIC (Para mayor información ver la Secciones \ref{aiclabel} y \ref{biclabel} ).
 
-La matriz de covarianza generada para cada parto puede presentar algunos valores cercanos a 0. Este tipo de valores sugieren que los efectos aleatorios en esos parámetros pueden removerse para simplificar el modelo. Esto se logra y se justifica al notar que los criterios AIC y BIC disminuyen nuevamente. Para evidenciar la relación existente entre parámetros, es posible graficar las matrices de covarianza del método ``nlmefit'', en donde los valores altamente correlacionados son cercanos a 1 y los que no, son forzados a 0. Para este trabajo de grado, se obtienen las relaciones en las matrices de covarianza mostradas en la Figura  \ref{covmatricespng} (ver Anexo \ref{anexocovmatricespng}). Identifíquese que el modelo de Wood requiere de la estimación de 3 parámetros por lo que originalmente las matrices de correlación entre parámetros aleatorios deberían ser de dimensión 3 para todos los partos, pero como algunas correlaciones a aleatorios resultan ser cercanas a 0, esta dimensión disminuye en algunos casos, ocasionando que la complejidad de ajuste sea mucho menor. Nuevamente estos resultados son soportados por la disminución en los criterios AIC y BIC, que aunque la disminución no es considerable, es menor a la anterior y por tanto representa un mejor ajuste.\\
+La matriz de covarianza generada para cada parto puede presentar algunos valores cercanos a 0. Este tipo de valores sugieren que los efectos aleatorios en esos parámetros pueden removerse para simplificar el modelo. Esto se logra y se justifica al notar que los criterios AIC y BIC disminuyen nuevamente. Para evidenciar la relación existente entre parámetros, es posible graficar las matrices de covarianza del método ``nlmefit'', en donde los valores altamente correlacionados son cercanos a 1 y los que no, son forzados a 0. Para este trabajo de grado, se obtienen las relaciones en las matrices de covarianza mostradas en la Figura  \ref{covmatricespng} (ver Anexo \ref{anexocovmatricespng}). Identifíquese que el modelo de Wood requiere de la estimación de 3 parámetros por lo que originalmente las matrices de correlación entre parámetros aleatorios deberían ser de dimensión 3 para todos los partos, pero como algunas correlaciones a aleatorios resultan ser cercanas a 0, esta dimensión disminuye en algunos casos, ocasionando que la complejidad de ajuste sea mucho menor. Nuevamente estos resultados son soportados por la disminución en los criterios AIC y BIC, que aunque la disminución no es considerable, es menor a la anterior y por tanto representa un mejor ajuste.
 
 Finalmente, una vez ejecuta el método nuevamente y teniendo en cuenta las consideraciones mencionadas hasta este momento, se generan los parámetros $b_{i}$, encargados de entregar las predicciones de los parámetros para cada una de las reses; con lo que se procede a sumar $b_{i}$ con los estimados de efectos fijos para producir el modelo de efectos mixtos final. Este proceso se repite para cada uno de los partos mediante un bucle, pero por motivos de espacio y lectura no son mostrados a continuación. (Ver script de Matlab denominado ``AnaMixEffGenBeta.m'' en \cite{msclfggprogrepo}). Los resultados obtenidos por el modelo de efectos mixtos son contrastados con la primer estimación no lineal del método de LMA y mostrados en la Figura \ref{mixedfinalpng}:
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.5950]{img/mixedfinalspa.jpg}
+	 \includegraphics[scale=0.5950]{mixedfinalspa.jpg}
 	 \end{center}
 	 \caption{Comparación final entre: a) Ajuste por NLMEA-RE y b) Ajuste por LMA . \label{mixedfinalpng}}
 \end{figure}
@@ -90,7 +90,7 @@ Adicionalmente, si no tenemos en cuenta la poca cantidad de valores atípicos ex
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.66]{img/residprobnormspa.jpg}
+	 \includegraphics[scale=0.66]{residprobnormspa.jpg}
 	 \end{center}
 	 \caption{Gráfica de probabilidad normal en los residuos. Parto \#1. \label{residprobnormpng}}
 \end{figure}
@@ -106,7 +106,7 @@ Llegados a este punto es importante mencionar 2 observaciones significativas:
 \section{Modelación dinámica} \label{dinamod}
 \subsection{Planteamiento del modelo}
 
-Para plantear el modelo se debe tener en cuenta los datos existentes referentes a las variables que se deseen analizar. Como primera instancia, los únicos 2 tipos de datos que se conocen son, los registros diarios de leche, para vacas de ordeño clasificadas por número de partos; y los registros de peso aproximadamente trimestrales. En cuanto a otras variables como la cantidad de alimento o la cantidad de estiércol producido se pueden considerar un rango de valores aproximados entre un 1\% y 10\% respecto al peso del animal. \\
+Para plantear el modelo se debe tener en cuenta los datos existentes referentes a las variables que se deseen analizar. Como primera instancia, los únicos 2 tipos de datos que se conocen son, los registros diarios de leche, para vacas de ordeño clasificadas por número de partos; y los registros de peso aproximadamente trimestrales. En cuanto a otras variables como la cantidad de alimento o la cantidad de estiércol producido se pueden considerar un rango de valores aproximados entre un 1\% y 10\% respecto al peso del animal.
 
 Como primera instancia, Consideraremos que las variables usadas para modelar el comportamiento de producción de CA-SENA-POP serán, el peso, la producción de leche y la producción de estiércol denominados como W, M (ó L) y E respectivamente.
 
@@ -171,7 +171,7 @@ Por último pero no menos importante, para observar el comportamiento de la solu
 
 \begin{figure}[H]
 	 \begin{center}
-	 \includegraphics[scale=0.69]{img/simulinkwp1.png}
+	 \includegraphics[scale=0.69]{simulinkwp1.png}
 	 \end{center}
 	 \caption{Diagrama de bloques del modelo EDO-WP en Matlab-Simulink. \label{modbloques}}
 \end{figure}
@@ -186,7 +186,7 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
         \begin{figure}[H]
         	 \centering
-        	 \includegraphics[scale=0.75]{img/igualki.png}
+        	 \includegraphics[scale=0.75]{igualki.png}
         	 \caption{Comportamiento del modelo con $(k_{i}=1)$, para todo $i$. \label{igualkipng}}
         \end{figure}
 
@@ -194,7 +194,7 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
         \begin{figure}[H]
         	 \centering
-        	 \includegraphics[scale=0.7750]{img/k1Mk2_k3Mk4.png}
+        	 \includegraphics[scale=0.7750]{k1Mk2_k3Mk4.png}
         	 \caption{Comportamiento del modelo con $(k_{1}>k_{2})$ y $(k_{3}>k_{4})$. \label{k1Mk2_k3Mk4png}}
         \end{figure}
 
@@ -202,18 +202,18 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
         \begin{figure}[H]
         	 \begin{center}
-        	 \includegraphics[scale=0.7750]{img/k1menk2_k3menk4.png}
+        	 \includegraphics[scale=0.7750]{k1menk2_k3menk4.png}
         	 \end{center}
         	 \caption{Comportamiento del modelo con $(k_{1}<k_{2})$ y $(k_{3}<k_{4})$. \label{k1menk2_k3menk4png}}
         \end{figure}
 
-    \item \textbf{Escenario \#4 - $(k_{1}<k_{3})$ y $(k_{2}<k_{4})$ $\overset{Ej.}{\implies}$ $k_{1}=0.6$, $k_{2}=0.69$, $k_{3}=0.65$, $k_{4}=0.8$:} Con esta simulación, se puede observar que el sistema se vuelve inestable (ver Figura \ref{k1menk3_k2menk4png}), y tiende a crecer hacia el infinito. Si observamos detalladamente este escenario, si la tasa de conversión de energía del alimento hacia el producto de materia ($k_{3}$) es mayor que  que la tasa de conversión de energía del alimento hacia el peso ($k_{1}$) y además, la tasa de decrecimiento del peso ($k_{2}$) es menor que la tasa de decrecimiento de la materia producida ($k_{4}$); el peso total del animal irá incrementando más rápido de lo que decrece por procesos naturales, dando como resultado que el peso crezca indefinidamente.\\
+    \item \textbf{Escenario \#4 - $(k_{1}<k_{3})$ y $(k_{2}<k_{4})$ $\overset{Ej.}{\implies}$ $k_{1}=0.6$, $k_{2}=0.69$, $k_{3}=0.65$, $k_{4}=0.8$:} Con esta simulación, se puede observar que el sistema se vuelve inestable (ver Figura \ref{k1menk3_k2menk4png}), y tiende a crecer hacia el infinito. Si observamos detalladamente este escenario, si la tasa de conversión de energía del alimento hacia el producto de materia ($k_{3}$) es mayor que  que la tasa de conversión de energía del alimento hacia el peso ($k_{1}$) y además, la tasa de decrecimiento del peso ($k_{2}$) es menor que la tasa de decrecimiento de la materia producida ($k_{4}$); el peso total del animal irá incrementando más rápido de lo que decrece por procesos naturales, dando como resultado que el peso crezca indefinidamente.
 
     El crecimiento exponencial podrá verse afectado dependiendo de la diferencia en magnitud entre $k_{2}$ y $k_{4}$.
 
         \begin{figure}[H]
         	\centering
-        	\includegraphics[scale=0.75]{img/k1menk3_k2menk4.png}
+        	\includegraphics[scale=0.75]{k1menk3_k2menk4.png}
         	\caption{Comportamiento del modelo con $(k_{1}<k_{3})$ y $(k_{2}<k_{4})$. \label{k1menk3_k2menk4png}}
         \end{figure}
 
@@ -222,17 +222,17 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.75]{img/k2Mk1_k3MAPk4.png}
+            \includegraphics[scale=0.75]{k2Mk1_k3MAPk4.png}
             \caption{Comportamiento del modelo con $(k_{1}< k_{2})$ y $(k_{3}\gtrsim k_{4})$. \label{k2Mk1_k3MAPk4png}}
         \end{figure}
 
     Por un lado, es de esperar que si $(k_{2} > k_{1})$, significa que la primer ecuación diferencial tenderá a ser negativa y por lo tanto el peso W disminuirá. Por otro lado, al $(k_{3} > k_{4})$ es de esperarse que la producción de materia sea mayor que perdida de materia producida y por ende P aumentará. Con base en lo visto anteriormente, podemos establecer que se debe cumplir que $(|k_{1} - k_{2}| < k_{p})$. Siendo $|k_{p}|$ un valor pequeño que puede establecerse a futuro, pero que de momento sabemos no puede ser tal que $(k_{2} \approx 4*k_{1})$ o de lo contrario el sistema se indeterminará de manera oscilante como el de la Figura \ref{k2Mk1_k3MAPk4png}.
 
-    \item \textbf{Escenario \#6 - $(k_{4}< k_{3})$ y $(k_{1}\gtrsim k_{2})$ $\overset{Ej.}{\implies}$ $k_{1}=0.051755$, $k_{2}=0.0510$, $k_{3}=0.61$, $k_{4}=0.051$:} En esta escenario también se obtiene un resultado oscilante (ver Figura \ref{k3Mk4_k1MAPk2png}), lo que quiere decir que el sistema presenta soluciones con parte imaginaria. Por tal motivo se puede establecer que debe existir una o varias restricciones entre los parámetros $k_{i}$.\\
+    \item \textbf{Escenario \#6 - $(k_{4}< k_{3})$ y $(k_{1}\gtrsim k_{2})$ $\overset{Ej.}{\implies}$ $k_{1}=0.051755$, $k_{2}=0.0510$, $k_{3}=0.61$, $k_{4}=0.051$:} En esta escenario también se obtiene un resultado oscilante (ver Figura \ref{k3Mk4_k1MAPk2png}), lo que quiere decir que el sistema presenta soluciones con parte imaginaria. Por tal motivo se puede establecer que debe existir una o varias restricciones entre los parámetros $k_{i}$.
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.75]{img/k3Mk4_k1MAPk2.png}
+            \includegraphics[scale=0.75]{k3Mk4_k1MAPk2.png}
             \caption{Comportamiento del modelo con $(k_{1}< k_{2})$ y $(k_{3}\gtrsim k_{4})$. \label{k3Mk4_k1MAPk2png}}
         \end{figure}
 
@@ -244,7 +244,7 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
             \begin{figure}[H]
         	 \centering
-        	 \includegraphics[scale=0.75]{img/k1Mk3_k2Mk4.png}
+        	 \includegraphics[scale=0.75]{k1Mk3_k2Mk4.png}
         	 \caption{Comportamiento del modelo con $(k_{1}>k_{3})$ y $(k_{2}>k_{4})$. \label{k1Mk3_k2Mk4png}}
         \end{figure}
 
@@ -254,7 +254,7 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
             \begin{figure}[H]
         	   \centering
-        	   \includegraphics[scale=0.75]{img/k1MAPk3_k2MAPk4.png}
+        	   \includegraphics[scale=0.75]{k1MAPk3_k2MAPk4.png}
         	   \caption{Comportamiento del modelo con $(k_{1}\gtrsim k_{3})$ y $(k_{2}\gtrsim k_{4})$. \label{kiMAPpng}}
             \end{figure}
 
@@ -262,8 +262,8 @@ Dejando de lado los valores iniciales existentes para las variables en cuestión
 
         \begin{figure}[H]
            \centering
-           \includegraphics[scale=0.75]{img/k1MAPk3_k2MAPk4_k1Mk2.png}
-           \caption{Comportamiento del modelo con $(k_{1}\gtrsim k_{3})$ y $(k_{2}\gtrsim k_{4})$. \label{kiMAPpng}}
+           \includegraphics[scale=0.75]{k1MAPk3_k2MAPk4_k1Mk2.png}
+           \caption{Comportamiento del modelo con $(k_{1}\gtrsim k_{3})$ y $(k_{2}\gtrsim k_{4})$. }
         \end{figure}
 
 \end{itemize}
@@ -279,9 +279,9 @@ Ahora bien, los valores numéricos de los parámetros $k_{i}$ usados para ejempl
 
 \subsubsection{Agrupación de datos para modelado}
 
-Como se ha establecido en la Sección \ref{ajustenonlin}, los registros existentes pueden variar en sus valores máximos, valores mínimos, formas de curva y duración o persistencia; dependiendo del parto del que hayan sido considerados para análisis. Adicionalmente, en la Secciones \ref{reestructleche} y \ref{reestructpeso} se mencionó que los datos de leche M y peso W fueron reestructurados en forma de tablas de tal forma que se obtuvieran ``arrays'' de igual tamaño; y que posteriormente serían usados para ajustar los datos a modelos EDOs.\\
+Como se ha establecido en la Sección \ref{ajustenonlin}, los registros existentes pueden variar en sus valores máximos, valores mínimos, formas de curva y duración o persistencia; dependiendo del parto del que hayan sido considerados para análisis. Adicionalmente, en la Secciones \ref{reestructleche} y \ref{reestructpeso} se mencionó que los datos de leche M y peso W fueron reestructurados en forma de tablas de tal forma que se obtuvieran ``arrays'' de igual tamaño; y que posteriormente serían usados para ajustar los datos a modelos EDOs.
 
-Por otra parte, en la Sección \ref{dinamod} se mencionó que el estiércol producido sería considerado como un valor teórico y que éste presentaría una relación proporcional al peso entre un 1 y 10 por ciento del peso del animal, por lo que por efectos de simplificación en la complejidad de análisis; se ha considerado que el estiércol producido E será aproximadamente un 5\% del registro de peso W. Por último pero no menos importante, en la Sección \ref{dinamod} también se mencionó que el modelo EDO solo utilizaría 2 variables de estado en tanto que a diferencia del peso W, la leche y el estiércol eran consideradas como materia producida y que sería denominada como $P=M+E$ (ó $P=L+E$).\\
+Por otra parte, en la Sección \ref{dinamod} se mencionó que el estiércol producido sería considerado como un valor teórico y que éste presentaría una relación proporcional al peso entre un 1 y 10 por ciento del peso del animal, por lo que por efectos de simplificación en la complejidad de análisis; se ha considerado que el estiércol producido E será aproximadamente un 5\% del registro de peso W. Por último pero no menos importante, en la Sección \ref{dinamod} también se mencionó que el modelo EDO solo utilizaría 2 variables de estado en tanto que a diferencia del peso W, la leche y el estiércol eran consideradas como materia producida y que sería denominada como $P=M+E$ (ó $P=L+E$).
 
 Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto de datos que contiene la información de las reses pertenecientes al grupo de partos \#3 mas sin embargo este proceso se repite para todos y cada uno de los grupos de partos mencionados a lo largo de este trabajo de grado. En cuanto al proceso de implementación algorítmica secuencial, éste se describe a continuación:
 
@@ -290,7 +290,7 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{img/Agrupmod.png}
+            \includegraphics[width=\textwidth]{Agrupmod.png}
             \caption{Primeros 4 registros del conjunto de datos del grupo de parto \#3.}
             \label{agrupmodpng}
         \end{figure}
@@ -299,7 +299,7 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{img/Agrupmod2d.png}
+            \includegraphics[width=\textwidth]{Agrupmod2d.png}
             \caption{Conjunto de datos del parto \#3 con solo 2 variables W y P para cada res.}
             \label{agrupmod2dpng}
         \end{figure}
@@ -308,7 +308,7 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale = 0.56]{img/x1x2einit.png}
+            \includegraphics[scale = 0.56]{x1x2einit.png}
             \caption{Variables de estado W y P y sus respectivas condiciones iniciales, para cada res.}
             \label{x1x2einitpng}
         \end{figure}
@@ -318,7 +318,7 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.7]{img/modEDOpython.png}
+            \includegraphics[scale=0.7]{modEDOpython.png}
             \caption{Modelo EDO-WP, implementación en Python.}
             \label{modEDOpythonpng}
         \end{figure}
@@ -328,7 +328,7 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{img/paramsadd.png}
+            \includegraphics[width=\textwidth]{paramsadd.png}
             \caption{Restricciones del modelo EDO-WP implementado en Python.}
             \label{paramsaddpng}
         \end{figure}
@@ -337,9 +337,9 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{img/minimizefor.png}
+            \includegraphics[width=\textwidth]{minimizefor.png}
             \caption{Soluciones de los modelos con ajuste de parámetros por mínimos cuadrados.}
-            \label{paramsaddpng}
+            % \label{paramsaddpng}
         \end{figure}
 
 \end{enumerate}
@@ -348,46 +348,46 @@ Pues bien, para ejemplificar el proceso algorítmico se utilizará el conjunto d
 
 Tal y como se concluyó en la Sección \ref{ajustemod} donde se estableció que el modelo EDO-WP podría ajustarse a los datos existentes referentes al peso W y a la materia producida P; es conveniente verificar si este ajuste ha sido logrado; por lo tanto procedamos a observar algunos de los resultados del ajuste del modelo.
 
-Para ello analizaremos los resultados del ajuste a los datos de las reses del grupo de parto \#3:\\
+Para ello analizaremos los resultados del ajuste a los datos de las reses del grupo de parto \#3:
 
 \begin{itemize}
-    \item \textbf{Fernanda (Fer)}\\
+    \item \textbf{Fernanda (Fer)}
 
     Para este ejemplar, podemos observar en la Figura \ref{ajustemodFerpng} que el la solución al modelo EDO-WP presenta un comportamiento creciente y luego decreciente, cuya forma  es similar a la que se quiere representar. Aún cuando visualmente podría considerarse que el ajuste no es lo suficientemente preciso, es importante resaltar que el ajuste por mínimos cuadrados ofrece errores relativos considerablemente bajos (ver valores de $k_{i}$ en la Figura \ref{ajustemodFerstatspng}).
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.5]{img/ajustemodFer.png}
+            \includegraphics[scale=0.5]{ajustemodFer.png}
             \caption{Ajuste del modelo EDO-WP, a los datos de la res ``Fernanda''.}
             \label{ajustemodFerpng}
         \end{figure}
     Entre estos resultados podemos resaltar el hecho que el error relativo para cada uno de los parámetros $k_{i}$ es menor al 5\%.
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.65]{img/ajustemodFerstats.png}
+            \includegraphics[scale=0.65]{ajustemodFerstats.png}
             \caption{Variables y datos estadísticos del ajuste.}
             \label{ajustemodFerstatspng}
         \end{figure}
 
     \pagebreak
-    \item \textbf{Guapa (Gpa)}\\
+    \item \textbf{Guapa (Gpa)}
 
     Con esta res podemos observar que el ajuste del modelo puede aproximar el comportamiento del peso respecto a su etapa decreciente y luego creciente, aún cuando el peso parece oscilar crecientemente alrededor de la solución planteada por el modelo (ver linea punteada en la Figura \ref{ajustemodGpapng}). Con base en lo anterior se puede esperar que los parámetros $k_{1}$ y $k_{2}$ presenten errores considerablemente bajos.
     \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.5]{img/ajustemodGpa.png}
+            \includegraphics[scale=0.5]{ajustemodGpa.png}
             \caption{Ajuste del modelo EDO-WP, a los datos de la res ``Guapa''.}
             \label{ajustemodGpapng}
         \end{figure}
      A comparación del ajuste de modelo a la res Fernanda, los parámetros ajustados $k_{i}$ presentan un error relativo entre el 10\% y 16\% que podría interpretarse que el modelo no puede representar los datos de la variable P de manera satisfactoria. No obstante, también se puede pensar que el ajuste es relativamente mejor, puesto que por una parte el parámetro Chi cuadrado ($\chi^{2}$) reducido es más cercano a 1 que en el caso anterior, y por la otra parte los criterios AIC y BIC también presentan un valor menor; Estos valores reducidos comúnmente se entiende como un buen ajuste del modelo para los datos experimentales de la res en cuestión.
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.65]{img/ajustemodGpastats.png}
+            \includegraphics[scale=0.65]{ajustemodGpastats.png}
             \caption{Variables y datos estadísticos del ajuste.}
             \label{ajustemodGpastatspng}
         \end{figure}
 
     \pagebreak
-    \item \textbf{Juanita (Juan)}\\
+    \item \textbf{Juanita (Juan)}
 
     En cuanto a la vaca Juanita (ó Juan) se puede recalcar un ajuste similar al del caso anterior. Esto puede pensarse puesto que la solución del modelo EDO (linea punteada en la Figura \ref{ajustemodJuanpng}) hace seguimiento del peso en su forma de onda con parte decreciente hasta aproximadamente los 150 días y su parte creciente hasta final del periodo de lactancia. En cuanto al seguimiento de la materia producida P se puede pensar que el modelo es fiel al comportamiento decreciente similar al que presentan los datos desde el valor máximo hasta los últimos registros cercanos al periodo de secado.
 
@@ -395,7 +395,7 @@ Para ello analizaremos los resultados del ajuste a los datos de las reses del gr
 
     \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.49]{img/ajustemodJuan.png}
+            \includegraphics[scale=0.49]{ajustemodJuan.png}
             \caption{Ajuste del modelo EDO-WP, a los datos de la res ``Juanita''.}
             \label{ajustemodJuanpng}
         \end{figure}
@@ -403,18 +403,18 @@ Para ello analizaremos los resultados del ajuste a los datos de las reses del gr
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.55]{img/ajustemodJuanstats.png}
+            \includegraphics[scale=0.55]{ajustemodJuanstats.png}
             \caption{Variables y datos estadísticos del ajuste.}
             \label{ajustemodJuanstatspng}
         \end{figure}
 
-    \item \textbf{Sol (Sol)}\\
+    \item \textbf{Sol (Sol)}
 
     En esta ocasión tenemos un análisis interesante puesto que en esta ocasión el peso W es constante según se describió en la Sección \ref{pocospesos}. Al asumir un peso constante en este periodo de lactancia debido a la falta de registros físicos o digitales de la res en cuestión, se esta limitando al modelo para que la primer ecuación del modelo EDO-WP sea aproximadamente 0 y por ende la ganancia de peso por la ingesta de alimento sea igual que la perdida de peso por procesos naturales. No obstante, para que esta afirmación se cumpla, se necesita que los parámetros $k_{1}$ y $k_{2}$ sean aproximadamente nulos, observación que claramente será notoria mediante un error de estimación alto; puesto que los valores usados como estimación inicial ($k_{1}=0.34$ y $k_{2}=0.7$) están muy alejados de los valores reales ($k_{1}=4.38e-10$ y $k_{2}=1.15e-10$) resultando en un error relativo considerablemente elevado con respecto a los valores de estimación inicial..
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.47]{img/ajustemodSol.png}
+            \includegraphics[scale=0.47]{ajustemodSol.png}
             \caption{Ajuste del modelo EDO-WP, a los datos de la res ``Sol''.}
             \label{ajustemodSolpng}
         \end{figure}
@@ -423,7 +423,7 @@ Para ello analizaremos los resultados del ajuste a los datos de las reses del gr
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.53]{img/ajustemodSolstats.png}
+            \includegraphics[scale=0.53]{ajustemodSolstats.png}
             \caption{Variables y datos estadísticos del ajuste.}
             \label{ajustemodSolstatspng}
         \end{figure}
